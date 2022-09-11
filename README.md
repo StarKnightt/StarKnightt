@@ -6,7 +6,7 @@
 - 📫 How to reach me: I have accounts on social media 
    
    
-   Twitter 🐦 - @Star_Knight12 
+   Twitter 🐦 - @Star_knight12
    
    Linkedin - @Prasenjit Nayak 
    
