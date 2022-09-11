@@ -6,11 +6,11 @@
 - 📫 How to reach me: I have accounts on social media 
    
    
-   Twitter 🐦 - @Star_knight12
+    Twitter 🐦 - [@Star_knight12](https://twitter.com/Star_Knight12)
    
-   Linkedin - @Prasenjit Nayak 
+    Linkedin - [@Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
    
    
-   Instagram (Personal Account) - @good_boi_____
+   Instagram - [@good_boi_____](https://www.instagram.com/good_boi_____/)
 - 😄 Pronouns: ... He / His
 - ⚡ Fun fact: ...  I do crazy things and always love what I do.
