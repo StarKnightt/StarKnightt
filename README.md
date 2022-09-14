@@ -14,3 +14,11 @@
    Instagram - [@good_boi_____](https://www.instagram.com/good_boi_____/)
 - 😄 Pronouns: ... He / His
 - ⚡ Fun fact: ...  I do crazy things and always love what I do.
+
+
+
+Here's my DevCard -
+
+
+
+<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=41t" width="400" alt="StarKnight's Dev Card"/></a>
