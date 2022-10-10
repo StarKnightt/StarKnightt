@@ -1,9 +1,9 @@
 ### Hey, I m Prasenjit Nayak 👋
 
-- 🔭 I’m currently working on my self improvement, 
-- 🌱 I’m currently learning software engineering in our college.
-- 🤔 I’m looking for best courses to learn. 
-- 📫 How to reach me: I have accounts on social media 
+- 🔭 I'm trying to get better myself right now., 
+- 🌱 At our college, I'm presently studying software engineering.
+- 🤔 I'm looking for the best educational opportunities.
+- 📫  Social media accounts are how you can contact me.
    
    
     Twitter 🐦 - [@Star_knight12](https://twitter.com/Star_Knight12)
@@ -20,4 +20,4 @@
 Here's my DevCard -
 
 
-<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=qgj" width="400" alt="StarKnight's Dev Card"/></a>
+<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=hwf" width="400" alt="StarKnight's Dev Card"/></a>
