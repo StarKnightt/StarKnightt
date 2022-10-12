@@ -11,7 +11,7 @@
     Linkedin - [@Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
    
    
-   Instagram - [@good_boi_____](https://www.instagram.com/good_boi_____/)
+   Instagram - [@prasenjitnayak_](https://www.instagram.com/prasenjitnayak_/)
 - 😄 Pronouns: ... He / His
 - ⚡ Fun fact: ...  I do crazy things and always love what I do.
 
