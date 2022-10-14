@@ -3,18 +3,11 @@
 - 🔭 I'm trying to get better myself right now., 
 - 🌱 At our college, I'm presently studying software engineering.
 - 🤔 I'm looking for the best educational opportunities.
-- 📫  Social media accounts are how you can contact me.
-   
-   
-    Twitter 🐦 - [@Star_knight12](https://twitter.com/Star_Knight12)
-   
-    Linkedin - [@Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
-   
-   
-   Instagram - [@prasenjitnayak_](https://www.instagram.com/prasenjitnayak_/)
+- 📫  Social media accounts are how you can contact me.  
 - 😄 Pronouns: ... He / His
 - ⚡ Fun fact: ...  I do crazy things and always love what I do.
-
+    
+   👨🏻‍💻 Click on my name to Connect with me  - [Prasenjit Nayak](https://linktr.ee/prasenjitnayak)
 
 
 Here's my DevCard -
