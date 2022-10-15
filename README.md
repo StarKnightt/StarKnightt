@@ -2,8 +2,7 @@
 
 - 🔭 I'm trying to get better myself right now., 
 - 🌱 At our college, I'm presently studying software engineering.
-- 🤔 I'm looking for the best educational opportunities.
-- 📫  Social media accounts are how you can contact me.  
+- 🤔 I'm looking for the best educational opportunities.  
 - 😄 Pronouns: ... He / His
 - ⚡ Fun fact: ...  I do crazy things and always love what I do.
     
