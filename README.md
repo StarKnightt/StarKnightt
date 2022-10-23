@@ -1,4 +1,4 @@
-### Hey, I m Prasenjit Nayak 👋
+### Hey, I'm Prasenjit Nayak 👋
 
 - 🔭 I'm trying to get better myself right now., 
 - 🌱 At our college, I'm presently studying software engineering.
