@@ -4,7 +4,7 @@
 - 🌱 At our college, I'm presently studying software engineering.
 - 🤔 I'm looking for the best educational opportunities.  
 - 😄 Pronouns: ... He / His
-- ⚡ Fun fact: ...  I do crazy things and always love what I do.
+- ⚡ Fun fact: ...  I'm a little shy.
     
  -  👨🏻‍💻 Click on my name to Connect with me  - [Prasenjit Nayak](https://linktr.ee/prasenjitnayak)
 
