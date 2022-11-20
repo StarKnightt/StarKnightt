@@ -17,7 +17,7 @@
 
 - 📫 How to reach me [https://linktr.ee/prasenjitnayak](https://linktr.ee/prasenjitnayak)
 
-- ⚡ Fun fact **I'm a little shy.**
+- ⚡ Fun fact - **I'm a little shy.**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
