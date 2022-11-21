@@ -38,5 +38,13 @@
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=starknightt&" alt="starknightt" /></p>
 
 
+Here's my DEV Card - 
+
+<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=1l9" width="400" alt="StarKnight's Dev Card"/></a>
+
+
+
+
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
