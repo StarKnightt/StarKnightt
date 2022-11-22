@@ -15,7 +15,7 @@
 
 - 👨‍💻 All of my projects are available at [https://github.com/StarKnightt?tab=repositories](https://github.com/StarKnightt?tab=repositories)
 
-- 📫 How to reach me [https://linktr.ee/prasenjitnayak](https://linktr.ee/prasenjitnayak)
+- 📫 Connect with me- [https://linktr.ee/prasenjitnayak](https://linktr.ee/prasenjitnayak)
 
 - ⚡ Fun fact - **I'm a little shy.**
 
