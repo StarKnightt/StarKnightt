@@ -39,7 +39,7 @@
 
 Here's my DEV Card - 
 
-<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=1l9" width="400" alt="StarKnight's Dev Card"/></a>
+<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=jbp" width="400" alt="StarKnight's Dev Card"/></a>
 
 
 
