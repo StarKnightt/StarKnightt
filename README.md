@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Prasenjit Nayak</h1>
+<h1 align="center">Hi 👋, I'm Prasen </h1>
 <h3 align="center">A learner who strives for improvement.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=starknightt&label=Profile%20views&color=0e75b6&style=flat" alt="starknightt" /> </p>
