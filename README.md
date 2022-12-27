@@ -19,6 +19,12 @@
 
 - ⚡ Fun fact - **I'm a little shy.**
 
+
+- ### Spotify Playing 🎧
+
+[<img src="https://spotify-azure-six.vercel.app
+/api/spotify-playing" alt="Spotify Now Playing" width="350" />][(https://open.spotify.com/user/<314e4dhxhuxasrsxjgd4divpnij4>)]
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/star_knight12" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="star_knight12" height="30" width="40" /></a>
