@@ -20,12 +20,6 @@
 - ⚡ Fun fact - **I'm a little shy.**
 
 
-
-### Spotify 🎧
-
-![Star_Knight's Playlist](https://spotify-recently-played-readme.vercel.app/api?user=314e4dhxhuxasrsxjgd4divpnij4)
-
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/star_knight12" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="star_knight12" height="30" width="40" /></a>
