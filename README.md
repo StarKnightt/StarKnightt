@@ -23,7 +23,7 @@
 
 ### Spotify Playing 🎧
 
-[<img src="https://spotify-azure-six.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/Star_Knight)
+[<img src="https://spotify-azure-six.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/314e4dhxhuxasrsxjgd4divpnij4)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
