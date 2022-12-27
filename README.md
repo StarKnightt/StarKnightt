@@ -21,11 +21,9 @@
 
 
 
-### Spotify Playing 🎧
+### Spotify 🎧
 
-&nbsp;<div align="center">
-  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/Star_Knight)
-</div>
+![Star_Knight's Playlist](https://spotify-recently-played-readme.vercel.app/api?user=314e4dhxhuxasrsxjgd4divpnij4)
 
 
 <h3 align="left">Connect with me:</h3>
