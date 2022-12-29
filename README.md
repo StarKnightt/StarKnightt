@@ -19,13 +19,7 @@
 
 - ⚡ Fun fact - **I'm a little shy.**
 
-Spotify Listening 🎧 -
-
-&nbsp;<div align="center">
-  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/Star_Knight)
-</div>
-
-
+ 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/star_knight12" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="star_knight12" height="30" width="40" /></a>
@@ -44,6 +38,14 @@ The language I most use :-
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=starknightt&" alt="starknightt" /></p>
 
+  # Spotify Listening 🎧 -
+
+&nbsp;<div align="center">
+  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/Star_Knight)
+</div>
+  
+  
+  
 
 Here's my DEV Card - 
 
