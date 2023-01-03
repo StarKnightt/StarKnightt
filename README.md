@@ -22,7 +22,7 @@
 
 - 🔭 I’m trying **to get better myself right now.**
 
-- 🌱 I’m currently learning **Java, CSS, JavaScript, HTML.**
+- 🌱 I’m currently learning **Java, Data Strucutre, Algorithm.**
 
 - 🧑🏻‍💻 At our college, **I'm presently studying software engineering.**
 
