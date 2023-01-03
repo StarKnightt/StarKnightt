@@ -1,5 +1,20 @@
 <h1 align="center">Hi 👋, I'm Prasen </h1>
-<h3 align="center">A learner who strives for improvement.</h3>
+
+
+
+
+
+
+
+<h3 align="center"> A Student who is trying to learn. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+![for](https://user-images.githubusercontent.com/92244026/210385320-9b130830-8a38-4bb2-9c3d-2631d650e3b2.gif)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=starknightt&label=Profile%20views&color=0e75b6&style=flat" alt="starknightt" /> </p>
 
