@@ -33,6 +33,10 @@
 - 📫 Connect with me- [https://linktr.ee/prasenjitnayak](https://linktr.ee/prasenjitnayak)
 
 - ⚡ Fun fact - **I'm a little shy.**
+ 
+ 
+ ## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=StarKnightt&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
  
 <h3 align="left">Connect with me:</h3>
@@ -83,3 +87,9 @@ Here's my DEV Card -
  
 
  
+
+
+
+### 😂 Random Dev Meme
+
+ will soon be added
