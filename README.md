@@ -31,7 +31,7 @@
 
 
 <!-- Contribution Graph -->
-## 📈 Contribution Graph
+## 📈 Contribution Graphs
 [![StarKnightt's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=StarKnightt&theme=high-contrast)](https://github.com/StarKnightt/github-readme-activity-graph)
   
    <br/>  
