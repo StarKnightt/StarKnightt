@@ -14,7 +14,7 @@
 
 - 🧑🏻‍💻 At our college, **I'm presently studying software engineering.**
 
-- 🤔 I'm looking **for a good internship.**
+- 🤔 I'm looking **for a good internships.**
 
 - 📫 Connect with me- [My all social networks](https://linkfree.io/StarKnightt)
 
