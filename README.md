@@ -1,25 +1,9 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
+## 📊 This week I spent my time on
+[![StarKnightt's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=StarKnightt)](https://github.com/anuraghazra/github-readme-stats)
 
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Berkshire+Swash&duration=3000&pause=1000&color=1FF7F5&width=435&lines=About+Me+-;I'm+a+college+student+from+CS-IT+branch;Trying+to+learn+efficiently.)](https://git.io/typing-svg)
-  <div id= "About me">
-<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/19fc6ec1ce6949f0b12a1227970d639e.png?r=z2q" width="300" align="right"alt="StarKnight's Dev Card"/></a>
-
-
-
-
-- 🔭 I’m a **college student right now.**
-
-- 🧑🏻‍💻 At our college, **I'm presently studying software engineering.**
-
-- 🤔 I'm looking **for a good internships.**
-
-- 📫 Connect with me- [My all social networks](https://linkfree.io/StarKnightt)
-
-- ⚡ Fun fact - **I'm a little shy.**
-  
  <!-- Social media accounts --> 
  ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/starknight__) 
