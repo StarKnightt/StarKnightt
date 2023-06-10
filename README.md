@@ -25,4 +25,4 @@
 [![StarKnightt's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=StarKnightt&theme=high-contrast)](https://github.com/StarKnightt/github-readme-activity-graph)
   
 <!-- End of the README files :) --!>
-<! -- Have a great day !) -->
+<! -- Have a awesome day !) --!>
