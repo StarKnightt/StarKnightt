@@ -25,4 +25,7 @@
 [![StarKnightt's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=StarKnightt&theme=high-contrast)](https://github.com/StarKnightt/github-readme-activity-graph)
   
 <!-- End of the README files :) --!>
+<<<<<<< HEAD
 <!-- Thank you for viewing my readme file>
+=======
+>>>>>>> c10647141bce74946ad50022d46cdcefd6111c0d
