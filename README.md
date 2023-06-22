@@ -5,7 +5,7 @@
 </div>  
 
 ## 📊 This week I spent my time on :-
-[![StarKnightt's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?StarKnightt=ffflabs)](https://github.com/anuraghazra/github-readme-stats)
+[![StarKnightt's wakatime stats](https://github-readme-stats.vercel.app/api/wakatimeStarKnightt=ffflabs)](https://github.com/anuraghazra/github-readme-stats)
 <!--START_SECTION:waka-->
 
 
