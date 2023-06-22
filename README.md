@@ -5,6 +5,14 @@
 </div>  
 
 <!--START_SECTION:waka-->
+
+```txt
+Java         13 mins         ████████████████▓░░░░░░░░   66.64 %
+HTML         4 mins          ██████░░░░░░░░░░░░░░░░░░░   24.13 %
+JavaScript   1 min           ██▒░░░░░░░░░░░░░░░░░░░░░░   08.73 %
+Markdown     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.50 %
+```
+
 <!--END_SECTION:waka-->
 
  <!-- Social media accounts --> 
