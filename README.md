@@ -4,14 +4,7 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
-
 <!--START_SECTION:waka-->
-
-
-
-
-
-
 <!--END_SECTION:waka-->
 
  <!-- Social media accounts --> 
