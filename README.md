@@ -4,9 +4,9 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
-<!--START_SECTION:waka-->
-
-```txt
+<!--START_SECTION:waka--> 
+My programming status: 
+``` 
 Java         13 mins         ████████████████▓░░░░░░░░   66.64 %
 HTML         4 mins          ██████░░░░░░░░░░░░░░░░░░░   24.13 %
 JavaScript   1 min           ██▒░░░░░░░░░░░░░░░░░░░░░░   08.73 %
