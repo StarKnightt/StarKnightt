@@ -4,13 +4,13 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
-<!--START_SECTION:waka--> 
-My programming status:
-``` 
-Java         13 mins         ████████████████▓░░░░░░░░   66.64 %
-HTML         4 mins          ██████░░░░░░░░░░░░░░░░░░░   24.13 %
-JavaScript   1 min           ██▒░░░░░░░░░░░░░░░░░░░░░░   08.73 %
-Markdown     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.50 %
+<!--START_SECTION:waka-->
+
+```txt
+Markdown     1 hr 1 min      ███████████████████▒░░░░░   77.52 %
+Java         11 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.00 %
+HTML         4 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.23 %
+JavaScript   1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.25 %
 ```
 
 <!--END_SECTION:waka-->
