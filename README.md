@@ -15,23 +15,36 @@ JavaScript   1 min           ▓░░░░░░░░░░░░░░░░
 
 <!--END_SECTION:waka-->
 
- <!-- Social media accounts --> 
- ## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/starknight__) 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/prasenjitnayak)  
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/Star_Knight12) 
- 
- <!-- Github Stats -->
- ### GitHub Streak 🧑🏻‍💻-
-  [![GitHub Streak](https://streak-stats.demolab.com?user=StarKnightt&theme=neon)](https://git.io/streak-stats)
-                                                                                                                                                                       
 
+# Namaste I'm Prasen 🙏🏻
+- Hello! I'm Prasenjit Nayak 👨🏻‍💻, a 3rd year B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
+- I'm currently focusing on learning Java 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
+- I love to read books 📚 in my spare time 🪹.
+- I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
+
+<!--social stats -->
+
+## Let's connect -
+- 💼 LinkedIn: [Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
+
+- 🐦 Twitter: [@StarKnight12](https://twitter.com/Star_Knight12)
+
+- 📲 Instagram: [code.prasen](https://www.instagram.com/code.prasen/)
+
+- ⌨️ Typing: [Starknight](https://10fastfingers.com/user/2856155/)
+
+- ⌨️ MonkeyType: [prasenj4551R](https://monkeytype.com/profile/prasenj4551R)
+
+- 🛩️ Discord: [star_knight](https://discord.com/users/star_knight)
+
+## Skills - Language and tools
+[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
+ <!-- Github Stats -->
 
 
 <!-- Contribution Graph -->
-## 📈 Contribution Graph 
+## 📈 Contribution Graph - 
 [![StarKnightt's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=StarKnightt&theme=high-contrast)](https://github.com/StarKnightt/github-readme-activity-graph)
   
 <!-- End of the README files :) --!>
 
-<!-- Thank you for viewing my readme file>
