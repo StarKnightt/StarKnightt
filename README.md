@@ -5,7 +5,7 @@
 </div>  
 
 <!--START_SECTION:waka--> 
-My programming status:
+I spent time on :
 ``` 
 Java         13 mins         ████████████████▓░░░░░░░░   66.64 %
 HTML         4 mins          ██████░░░░░░░░░░░░░░░░░░░   24.13 %
