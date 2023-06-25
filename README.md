@@ -6,15 +6,13 @@
 
 ## I spent my time on : 
 <!--START_SECTION:waka-->
-
-```txt
-Markdown     2 hrs 44 mins   ███████████████████████▒░   93.05 %
-Java         10 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.94 %
-JavaScript   1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.01 %
 ```
-
+Markdown     1 hr 1 min      ███████████████████▒░░░░░   77.52 %
+Java         11 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.00 %
+HTML         4 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.23 %
+JavaScript   1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.25 %
+```
 <!--END_SECTION:waka-->
-
 
 # Namaste I'm Prasen 🙏🏻
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a 3rd year B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
@@ -22,6 +20,8 @@ JavaScript   1 min           ▒░░░░░░░░░░░░░░░░
 - I love to read books 📚 in my spare time 🪹.
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
+## Skills - Language and tools
+[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ## Let's connect -
@@ -37,14 +37,6 @@ JavaScript   1 min           ▒░░░░░░░░░░░░░░░░
 
 - 🛩️ Discord: [star_knight](https://discord.com/users/star_knight)
 
-## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
- <!-- Github Stats -->
 
-
-<!-- Contribution Graph -->
-## 📈 Contribution Graph - 
-[![StarKnightt's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=StarKnightt&theme=high-contrast)](https://github.com/StarKnightt/github-readme-activity-graph)
-  
 <!-- End of the README files :) --!>
 
