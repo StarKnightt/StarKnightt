@@ -6,11 +6,11 @@
 
 ## I spent my time on : 
 <!--START_SECTION:waka-->
-```
-Markdown     1 hr 1 min      ███████████████████▒░░░░░   77.52 %
-Java         11 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.00 %
-HTML         4 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.23 %
-JavaScript   1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.25 %
+
+```txt
+Markdown     2 hrs 44 mins   ███████████████████████▒░   93.05 %
+Java         10 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.94 %
+JavaScript   1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.01 %
 ```
 
 <!--END_SECTION:waka-->
