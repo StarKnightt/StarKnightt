@@ -1,4 +1,4 @@
-<img src="https://github.com/StarKnightt/StarKnightt/assets/92244026/88aa0fff-389b-4d45-9724-6f6e8a58526c" alt="give alternate name if image doesn't load" align="right" width="180">
+<img src="https://github.com/StarKnightt/StarKnightt/assets/92244026/88aa0fff-389b-4d45-9724-6f6e8a58526c" alt="give alternate name if image doesn't load" align="right" width="190">
 <div>
 
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
@@ -21,7 +21,7 @@ JavaScript   1 min           ▓░░░░░░░░░░░░░░░░
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode,linux&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ## Let's connect -
