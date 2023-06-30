@@ -6,12 +6,13 @@
 
 ## I spent my time on : 
 <!--START_SECTION:waka-->
+
+```txt
+Markdown   1 hr 58 mins    █████████████████░░░░░░░░   68.12 %
+Java       49 mins         ███████░░░░░░░░░░░░░░░░░░   28.51 %
+Other      5 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.37 %
 ```
-Markdown     1 hr 1 min      ███████████████████▒░░░░░   77.52 %
-Java         11 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.00 %
-HTML         4 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.23 %
-JavaScript   1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.25 %
-```
+
 <!--END_SECTION:waka-->
 
 # Namaste I'm Prasen 🙏🏻
@@ -21,7 +22,7 @@ JavaScript   1 min           ▓░░░░░░░░░░░░░░░░
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode,linux&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ## Let's connect -
