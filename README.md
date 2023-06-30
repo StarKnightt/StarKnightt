@@ -22,7 +22,7 @@ Other      5 mins          █░░░░░░░░░░░░░░░░�
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode,linux&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ## Let's connect -
