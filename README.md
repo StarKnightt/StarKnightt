@@ -7,7 +7,7 @@
 ## I spent my time on : 
 <!--START_SECTION:waka-->
 
-```txt
+```
 Markdown   1 hr 58 mins    █████████████████░░░░░░░░   68.12 %
 Java       49 mins         ███████░░░░░░░░░░░░░░░░░░   28.51 %
 Other      5 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.37 %
