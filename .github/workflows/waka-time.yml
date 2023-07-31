@@ -1,16 +1,40 @@
 name: Waka Readme
 
 on:
-  schedule:
-    # Runs at 12am IST
-    - cron: '30 18 * * *'
   workflow_dispatch:
+  schedule:
+    # Runs at 12am UTC
+    - cron: "0 0 * * *"
+
 jobs:
   update-readme:
-    name: Update Readme with Metrics
+    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - uses: athul/waka-readme@master
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # meta
+          API_BASE_URL: https://wakatime.com/api
+          REPOSITORY: athul/athul
+          # content
+          SHOW_TITLE: true
+          SECTION_NAME: waka
+          BLOCKS: ->
+          CODE_LANG: all_time 
+          TIME_RANGE: true
+          LANG_COUNT: 10
+          SHOW_TIME: true
+          SHOW_TOTAL: true
+          SHOW_MASKED_TIME: false
+          STOP_AT_OTHER: true
+          # commit
+          COMMIT_MESSAGE: Updated waka-readme graph with new metrics
+          TARGET_BRANCH: master
+          TARGET_PATH: README.md
+          COMMITTER_NAME: GitHubActionBot
+          COMMITTER_EMAIL: action-bot@github.org
+          AUTHOR_NAME: Athul
+          AUTHOR_EMAIL: athul@example.org
+          # you can populate email-id with secretes instead
