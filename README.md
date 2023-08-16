@@ -4,7 +4,7 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
-## I spent my time on : 
+## This week I spent my time on : 
 <!--START_SECTION:waka-->
 
 ```txt
