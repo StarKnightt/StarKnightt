@@ -1,6 +1,3 @@
-name: Waka Readme
-
-on:
   schedule:
     # Runs every 4 hours
     - cron: '0 */4 * * *'
