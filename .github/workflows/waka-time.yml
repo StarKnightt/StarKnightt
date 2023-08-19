@@ -19,7 +19,7 @@ jobs:
           SECTION_NAME: waka
           BLOCKS: ░▒▓█
           CODE_LANG: txt
-          TIME_RANGE: last_7_days
+          TIME_RANGE: all_time  # Display coding activity for all time
           LANG_COUNT: 5
           SHOW_TIME: true
           SHOW_TOTAL: true
@@ -28,7 +28,7 @@ jobs:
           COMMIT_MESSAGE: Updated waka-readme graph with new metrics
           TARGET_BRANCH: NOT_SET
           TARGET_PATH: NOT_SET
-          COMMITTER_NAME: NOT_SET
-          COMMITTER_EMAIL: NOT_SET
+          COMMITTER_NAME: Prasenjit Nayak
+          COMMITTER_EMAIL: prasenjitt4e@gmail.com
           AUTHOR_NAME: NOT_SET
           AUTHOR_EMAIL: NOT_SET
