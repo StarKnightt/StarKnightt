@@ -7,7 +7,7 @@
 
 ## Programming Status: 
 <!--START_SECTION:waka-->
-My Programming Status :
+
 ```txt
 From: 04 June 2023 - To: 18 August 2023
 
