@@ -7,7 +7,7 @@
 
 ## Programming Status: 
 <!--START_SECTION:waka-->
-My Programming Status :
+
 ```txt
 From: 04 June 2023 - To: 18 August 2023
 
@@ -31,6 +31,9 @@ Python           44 mins         ▒░░░░░░░░░░░░░░�
 ## Skills - Language and tools
 [![My Skills](https://skillicons.dev/icons?i=java,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
+
+### StackOverflow
+<a href="https://stackoverflow.com/users/22008549/star-knight"><img src="https://stackoverflow.com/users/flair/22008549.png" width="208" height="58" alt="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
 
 ## Let's connect -
 - 💼 LinkedIn: [Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
