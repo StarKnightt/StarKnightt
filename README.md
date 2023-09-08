@@ -4,7 +4,6 @@
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
 </div>  
 
-
 ## Programming Status: 
 <!--START_SECTION:waka-->
 
