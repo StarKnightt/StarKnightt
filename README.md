@@ -23,7 +23,7 @@ Python           44 mins         ▒░░░░░░░░░░░░░░�
 
 # Namaste I'm Prasen 🙏🏻
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a 3rd year B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
-- I'm currently focusing on learning Java 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
+- I'm currently focusing on learning Java and Web Development 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
 - I love to read books 📚 in my spare time 🪹.
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
