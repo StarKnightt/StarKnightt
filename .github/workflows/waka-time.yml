@@ -3,9 +3,7 @@ name: Waka Readme
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* * * * *"  # This runs the command every minute
-
- 
+    - cron: "30 2 * * *"  # This runs the workflow at 8:00 AM IST (02:30 UTC)
 
 jobs:
   update-readme:
@@ -15,13 +13,13 @@ jobs:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          API_BASE_URL: https://wakatime.com/api  # Change this if using a different service
-          REPOSITORY: StarKnightt/StarKnightt  # Change to your GitHub username and repository name
+          API_BASE_URL: https://wakatime.com/api
+          REPOSITORY: StarKnightt/StarKnightt
           SHOW_TITLE: true
           SECTION_NAME: waka
           BLOCKS: ░▒▓█
           CODE_LANG: txt
-          TIME_RANGE: all_time  # Display coding activity for all time
+          TIME_RANGE: all_time
           LANG_COUNT: 5
           SHOW_TIME: true
           SHOW_TOTAL: true
