@@ -46,5 +46,6 @@ JavaScript       2 hrs 9 mins    ▓░░░░░░░░░░░░░░�
 - ⌨️ MonkeyType: [prasenj4551R](https://monkeytype.com/profile/prasenj4551R)
 
 - 🛩️ Discord: [star_knight](https://discord.com/users/star_knight)
+
 <!-- End of the README files :) --!>
 
