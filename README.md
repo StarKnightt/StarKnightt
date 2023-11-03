@@ -8,15 +8,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 04 June 2023 - To: 31 October 2023
+From: 04 June 2023 - To: 01 November 2023
 
-Total Time: 148 hrs 42 mins
+Total Time: 149 hrs 7 mins
 
-CSS               53 hrs 16 mins  █████████░░░░░░░░░░░░░░░░   35.75 %
-HTML              50 hrs 29 mins  ████████▒░░░░░░░░░░░░░░░░   33.89 %
-JavaScript        16 hrs 35 mins  ██▓░░░░░░░░░░░░░░░░░░░░░░   11.14 %
-Java              13 hrs 14 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   08.89 %
-Markdown          10 hrs 43 mins  █▓░░░░░░░░░░░░░░░░░░░░░░░   07.20 %
+CSS               53 hrs 17 mins  █████████░░░░░░░░░░░░░░░░   35.66 %
+HTML              50 hrs 53 mins  ████████▓░░░░░░░░░░░░░░░░   34.06 %
+JavaScript        16 hrs 35 mins  ██▓░░░░░░░░░░░░░░░░░░░░░░   11.11 %
+Java              13 hrs 14 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   08.86 %
+Markdown          10 hrs 43 mins  █▓░░░░░░░░░░░░░░░░░░░░░░░   07.18 %
 ```
 
 <!--END_SECTION:waka-->
