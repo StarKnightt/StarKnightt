@@ -39,7 +39,7 @@ Markdown          10 hrs 43 mins  █▓░░░░░░░░░░░░░�
 
 - 🐦 Twitter: [@StarKnight12](https://twitter.com/Star_Knight12)
 
-- 📲 Instagram: [code.prasen](https://www.instagram.com/code.prasen/)
+- 📲 Instagram: [code.prasen](https://www.instagram.com/starknight__/)
 
 - ⌨️ Typing: [Starknight](https://10fastfingers.com/user/2856155/)
 
