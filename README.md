@@ -28,7 +28,7 @@ Markdown          12 hrs 54 mins  █▒░░░░░░░░░░░░░�
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,node.js,express.js,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,node,express,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ### StackOverflow
