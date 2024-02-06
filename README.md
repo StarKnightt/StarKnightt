@@ -13,7 +13,7 @@
 
 </div>  
 
-## Programming Status: 
+## Coding Status: 
 <!--START_SECTION:waka-->
 
 ```txt
