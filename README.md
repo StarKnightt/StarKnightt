@@ -44,17 +44,7 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 
 ## Let's connect -
-- 💼 LinkedIn: [Prasenjit Nayak](https://www.linkedin.com/in/prasenjitnayak/)
-
-- 🐦 Twitter: [@StarKnight12](https://twitter.com/Star_Knight12)
-
-- 📲 Instagram: [code.prasen](https://www.instagram.com/starknight__/)
-
-- ⌨️ Typing: [Starknight](https://10fastfingers.com/user/2856155/)
-
-- ⌨️ MonkeyType: [prasenj4551R](https://monkeytype.com/profile/prasenj4551R)
-
-- 🛩️ Discord: [star_knight](https://discord.com/users/star_knight)
+- 💼 myLinks: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
 
 
 
