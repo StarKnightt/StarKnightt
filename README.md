@@ -44,9 +44,11 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 
 ## Let's connect -
-- 💼 myLinks: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
+- 💼 SocialAccoutns: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
 
 
+## DevCard -
 
+<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/v2/JeHPFXkQbNoEEkkHQxG3Q.png?type=wide&r=4mg" width="652" alt="StarKnight's Dev Card"/></a>
 <!-- End of the README files :) --!>
 
