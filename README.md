@@ -2,7 +2,8 @@
 <div>
 
 ![Visitor Count](https://profile-counter.glitch.me/StarKnightt/count.svg)
-
+
+
 
 
 [![wakatime](https://wakatime.com/badge/user/d27d27da-dc32-4c1b-a703-f654f4050105.svg)](https://wakatime.com/@d27d27da-dc32-4c1b-a703-f654f405010)
@@ -50,4 +51,3 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 <a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/v2/JeHPFXkQbNoEEkkHQxG3Q.png?type=wide&r=4mg" width="652" alt="StarKnight's Dev Card"/></a>
 <!-- End of the README files :) --!>
-
