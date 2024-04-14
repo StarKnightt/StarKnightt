@@ -36,7 +36,7 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,nodejs,expressjs,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 ### StackOverflow
