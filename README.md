@@ -49,5 +49,5 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 ## DevCard -
 
-<a href="https://app.daily.dev/star_knight___"><img src="https://api.daily.dev/devcards/v2/JeHPFXkQbNoEEkkHQxG3Q.png?type=wide&r=d71" width="652" alt="StarKnight's Dev Card"/></a>
+<a href="https://app.daily.dev/star_knight___"><img src="./devcard.png" width="356" alt="StarKnight's Dev Card"/></a>
 <!-- End of the README files :) --!>
