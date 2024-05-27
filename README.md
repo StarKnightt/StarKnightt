@@ -44,7 +44,7 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 
 ## Let's connect -
-- 💼 SocialAccoutns: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
+- 💼 Social Accounts: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
 
 
 ## DevCard -
