@@ -42,9 +42,9 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 ### StackOverflow
 <a href="https://stackoverflow.com/users/22008549/star-knight"><img src="https://stackoverflow.com/users/flair/22008549.png" width="208" height="58" alt="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
 
-
 ## Let's connect -
-- 💼 Social Accounts: [Prasenjit Nayak](https://www.biodrop.io/StarKnightt)
+- 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
+[![Buy me a ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W0ZCV81)
 
 
 ## DevCard -
