@@ -44,8 +44,8 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 
 ## Let's connect -
 - 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
-[![Buy me a ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W0ZCV81)
 
+  [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ko-fi.com/prasenjit) 
 
 ## DevCard -
 
