@@ -45,8 +45,6 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 ## Let's connect -
 - 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
 
-  [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ko-fi.com/prasenjit) 
-
 ## DevCard -
 
 <a href="https://app.daily.dev/star_knight___"><img src="./devcard.png" width="356" alt="StarKnight's Dev Card"/></a>
