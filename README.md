@@ -45,15 +45,6 @@ Java              13 hrs 20 mins  █░░░░░░░░░░░░░░�
 ## Let's connect -
 - 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
 
-## Support Me
-
-If you find my work useful and want to support me, consider buying me a book!
-
-<a href="https://www.buymeacoffee.com/prasen" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Book" style="height: 60px !important;width: 217px !important;">
-</a>
-
-
 ## DevCard -
 
 <a href="https://app.daily.dev/star_knight___"><img src="./devcard.png" width="356" alt="StarKnight's Dev Card"/></a>
