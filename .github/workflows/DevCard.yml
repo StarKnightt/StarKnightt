@@ -1,4 +1,3 @@
-
 name: daily-devcard
 on:
   workflow_dispatch:
@@ -18,3 +17,4 @@ jobs:
         with:
           user_id: ${{ 'JeHPFXkQbNoEEkkHQxG3Q' }}
           commit_message: "chore: update ${filename}"
+          type: wide
