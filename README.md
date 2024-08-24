@@ -39,8 +39,7 @@ Java              13 hrs 20 mins  ▓░░░░░░░░░░░░░░�
 [![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
-### StackOverflow
-<a href="https://stackoverflow.com/users/22008549/star-knight"><img src="https://stackoverflow.com/users/flair/22008549.png" width="208" height="58" alt="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Star_Knight at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+<a href="https://www.buymeacoffee.com/prasen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Let's connect -
 - 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
