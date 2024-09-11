@@ -44,8 +44,4 @@ Java              13 hrs 20 mins  ▓░░░░░░░░░░░░░░�
 ## Let's connect -
 - 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
 
-## DevCard -
-
-<a href="https://app.daily.dev/star_knight___"><img src="./devcard.png" width="356" alt="StarKnight's Dev Card"/></a>
-
 <!-- End of the README files :) --!>
