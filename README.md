@@ -26,6 +26,9 @@ Java              13 hrs 20 mins  ▓░░░░░░░░░░░░░░�
 
 <!--END_SECTION:waka-->
 
+## Account Status:
+[![StarKnightt's GitHub | Stats](https://stats.quira.sh/StarKnightt/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=StarKnightt)
+
 # Namaste I'm Prasen 🙏🏻
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
 - I'm currently focusing on learning Web Development (react currently) 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
