@@ -27,7 +27,11 @@ Java              13 hrs 20 mins  ▓░░░░░░░░░░░░░░�
 <!--END_SECTION:waka-->
 
 ## Account Status:
+<details>
+  
 [![StarKnightt's GitHub | Stats](https://stats.quira.sh/StarKnightt/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=StarKnightt)
+
+</details>
 
 # Namaste I'm Prasen 🙏🏻
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
