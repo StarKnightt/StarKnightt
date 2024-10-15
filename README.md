@@ -38,6 +38,7 @@ Java              13 hrs 20 mins  ▓░░░░░░░░░░░░░░�
 - I'm currently focusing on learning Web Development (react currently) 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
 - I love to read books 📚 in my spare time 🪹.
 - I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
+- If you got any doubts you can ask me on twitter.
 
 ## Skills - Language and tools
 [![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
