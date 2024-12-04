@@ -47,6 +47,6 @@ TypeScript        18 hrs 44 mins  █░░░░░░░░░░░░░░�
 <a href="https://www.buymeacoffee.com/prasen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 216px !important;" ></a>
 
 ## Let's connect -
-- 💼 Social Accounts: [Prasenjit Nayak](https://t.co/oujYu4Scht) <br>
+- 💼 Social Accounts: [Prasenjit Nayak](https://prasen.dev) <br>
 
 <!-- End of the README files :) --!>
