@@ -40,7 +40,7 @@ Markdown          23 hrs 3 mins   █░░░░░░░░░░░░░░�
 - If you got any doubts you can ask me on twitter.
 
 ## Skills - Language and tools
-[![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,typescript,next,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
 
 <a href="https://www.buymeacoffee.com/prasen" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 216px !important;" ></a>
