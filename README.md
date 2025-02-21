@@ -33,6 +33,10 @@ Markdown          24 hrs 12 mins  █░░░░░░░░░░░░░░�
 </details>
 
 # Namaste I'm Prasen 🙏🏻
+
+<!-- BLOG-POSTS:START -->
+<!-- BLOG-POSTS:END -->
+
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
 - I'm currently focusing on learning Web Development (react currently) 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
 - I love to read books 📚 in my spare time 🪹.
