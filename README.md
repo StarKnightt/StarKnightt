@@ -35,6 +35,11 @@ Markdown          24 hrs 12 mins  █░░░░░░░░░░░░░░�
 # Namaste I'm Prasen 🙏🏻
 
 <!-- BLOG-POSTS:START -->
+- [Understanding Next.js: A Simple Guide to the Popular React Framework](https://github.com/StarKnightt/prasendev/blog/next-js-workflow)
+- [Tailwind CSS 4.0 - New changes](https://github.com/StarKnightt/prasendev/blog/tailwindcss-4.0)
+- [Web Development for 2025: A Guide to What's Next](https://github.com/StarKnightt/prasendev/blog/web-development-2025)
+- [Is Ubuntu Completely bloated?](https://github.com/StarKnightt/prasendev/blog/ubuntu-is-bloated)
+- [Is Computer Science Saturated?](https://github.com/StarKnightt/prasendev/blog/hello-world)
 <!-- BLOG-POSTS:END -->
 
 - Hello! I'm Prasenjit Nayak 👨🏻‍💻, a B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
