@@ -25,6 +25,10 @@ Markdown          24 hrs 12 mins  █░░░░░░░░░░░░░░�
 
 <!--END_SECTION:waka-->
 
+## Latest Blog Posts
+<!-- BLOG-POSTS:START -->
+<!-- BLOG-POSTS:END -->
+
 ## Account Status:
 <details>
   

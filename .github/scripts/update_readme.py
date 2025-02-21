@@ -4,12 +4,15 @@ def main():
     # Fetch RSS feed from your portfolio
     feed = feedparser.parse('https://www.prasen.dev/rss.xml')
     
-    # Generate markdown for blog posts (latest 5)
+    # Generate markdown for blog posts (latest 3)
     posts_md = []
-    for entry in feed.entries[:5]:
+    for entry in feed.entries[:3]:
         title = entry.title
         link = entry.link
         posts_md.append(f"- [{title}]({link})")
+    
+    # Add "Read more" link
+    posts_md.append("\n➡️ [Read more blog posts](https://prasen.dev/blog)")
     
     blog_section = "\n".join(posts_md)
     
