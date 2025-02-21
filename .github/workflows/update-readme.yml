@@ -2,35 +2,32 @@ name: Update README with Latest Blogs
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs every hour
-  workflow_dispatch: # Allows manual triggering
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:      # Allows manual triggering
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-
-      - name: Install dependencies
+          python-version: '3.x'
+          
+      - name: Install feedparser
+        run: pip install feedparser
+          
+      - name: Update README
+        run: python .github/scripts/update_readme.py
+        
+      - name: Commit and push if changed
         run: |
-          python -m pip install --upgrade pip
-          pip install feedparser
-
-      - name: Run script to update README
-        run: |
-          python .github/scripts/update_readme.py
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add README.md
-          git commit -m "Update README with latest blogs"
+          git commit -m "docs: Update blog posts" || exit 0
           git push

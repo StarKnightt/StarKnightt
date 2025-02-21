@@ -1,27 +1,15 @@
 import feedparser
-from datetime import datetime
-import pytz
-
-def format_date(date_str):
-    try:
-        # Parse the date string to datetime object
-        dt = datetime.strptime(date_str, '%a, %d %b %Y %H:%M:%S %z')
-        # Format to a more readable string
-        return dt.strftime('%B %d, %Y')
-    except:
-        return date_str
 
 def main():
-    # Fetch RSS feed
+    # Fetch RSS feed from your portfolio
     feed = feedparser.parse('https://www.prasen.dev/rss.xml')
     
-    # Generate markdown for blog posts
+    # Generate markdown for blog posts (latest 5)
     posts_md = []
-    for entry in feed.entries[:5]:  # Get latest 5 posts
+    for entry in feed.entries[:5]:
         title = entry.title
         link = entry.link
-        date = format_date(entry.published)
-        posts_md.append(f"- [{title}]({link}) - {date}")
+        posts_md.append(f"- [{title}]({link})")
     
     blog_section = "\n".join(posts_md)
     
