@@ -8,7 +8,7 @@
 
 </div>  
 
-## Code Time: 
+## Code Time : 
 <!--START_SECTION:waka-->
 
 ```txt
