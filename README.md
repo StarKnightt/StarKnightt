@@ -41,14 +41,6 @@ Markdown          24 hrs 31 mins  █░░░░░░░░░░░░░░�
 
 </details>
 
-# Namaste I'm Prasen 🙏🏻
-
-- Hello! I'm Prasenjit Nayak 👨🏻‍💻, a B.Tech 🎓student 👨🏻‍🎓 on a journey of continuous learning 📑.
-- I'm currently focusing on learning Web Development (react currently) 🍵 while improving my communication 🗣️ and programming skills ⌨️. 
-- I love to read books 📚 in my spare time 🪹.
-- I'm open to collaborating 🫂, discussing projects 📒, and connecting with fellow learners 🤓. Let's grow 📈 and learn 🙎🏻‍♂️ together!
-- If you got any doubts you can ask me on twitter.
-
 ## Skills - Language and tools
 [![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,typescript,next,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
