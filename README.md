@@ -39,7 +39,7 @@ Markdown          26 hrs 25 mins  █░░░░░░░░░░░░░░�
 ## Account Status:
 <details>
   
-[![StarKnightt's GitHub | Stats](https://stats.quira.sh/StarKnightt/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=StarKnightt)
+working on it.
 
 </details>
 
