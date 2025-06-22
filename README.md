@@ -1,3 +1,6 @@
+## About me
+- [Prasenjit Nayak](https://prasen.dev) <br>
+
 ## Code Time : 
 <!--START_SECTION:waka-->
 
@@ -24,7 +27,5 @@ Markdown          27 hrs 48 mins  █░░░░░░░░░░░░░░�
 ➡️ [Read more blog posts](https://prasen.dev/blog)
 <!-- BLOG-POSTS:END -->
 
-## Let's connect -
-- 💼 Social Accounts: [Prasenjit Nayak](https://prasen.dev) <br>
 
 <!-- End of the README files :) --!>
