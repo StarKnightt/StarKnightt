@@ -24,13 +24,6 @@ Markdown          27 hrs 48 mins  █░░░░░░░░░░░░░░�
 ➡️ [Read more blog posts](https://prasen.dev/blog)
 <!-- BLOG-POSTS:END -->
 
-## Account Status:
-<details>
-  
-working on it.
-
-</details>
-
 ## Skills - Language and tools
 [![My Skills](https://skillicons.dev/icons?i=react,html,css,javascript,nodejs,expressjs,mongo,typescript,next,tailwind,pug,git,github,vscode,linux,discord&theme=light)](https://skillicons.dev)
 <!--social stats -->
