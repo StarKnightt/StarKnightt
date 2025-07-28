@@ -1,6 +1,7 @@
 ## About me
 - [Prasenjit Nayak](https://prasen.dev) <br>
 
+[![GitHub Streak](https://streak-stats.demolab.com?user=StarKnightt)](https://git.io/streak-stats)
 
 
 ## Latest Blog Posts
@@ -11,6 +12,6 @@
 
 ➡️ [Read more blog posts](https://prasen.dev/blog)
 <!-- BLOG-POSTS:END -->
-
+[![GitHub Streak](https://streak-stats.demolab.com?user=StarKnightt&theme=dark)](https://git.io/streak-stats)
 
 <!-- End of the README files :) --!>
