@@ -11,6 +11,6 @@
 
 ➡️ [Read more blog posts](https://prasen.dev/blog)
 <!-- BLOG-POSTS:END -->
-[![GitHub Streak](https://streak-stats.demolab.com?user=StarKnightt&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=StarKnightt&theme=dark&hide_total_contributions=true&hide_current_streak=true)](https://git.io/streak-stats)
 
 <!-- End of the README files :) --!>
