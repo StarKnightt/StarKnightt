@@ -1,33 +1,150 @@
-name: Update README with Latest Blogs
+#!/usr/bin/env python3
+"""
+Update README.md blog list.
 
-on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
-  workflow_dispatch:      # Allows manual triggering
+Behavior:
+1) Try multiple feed URLs on prasen.dev and use the entry.link values if available.
+2) If no feed is found, scan repository folders for blog files and build site URLs:
+   - Searches: blog/, content/blog/, content/posts/, _posts/
+   - Uses filename (strips date prefixes like 2023-01-02-...) as slug and generates:
+     https://prasen.dev/blog/<slug>
+3) Replaces the block between <!-- BLOG-POSTS:START --> and <!-- BLOG-POSTS:END -->.
+"""
 
-jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-          
-      - name: Install feedparser
-        run: pip install feedparser
-          
-      - name: Update README
-        run: python .github/scripts/update_readme.py
-        
-      - name: Commit and push if changed
-        run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add README.md
-          git commit -m "docs: Update blog posts" || exit 0
-          git push
+from pathlib import Path
+import feedparser
+import re
+import sys
+from datetime import datetime
+
+# CONFIG
+SITE_BASE = "https://prasen.dev"
+SITE_BLOG_PREFIX = SITE_BASE + "/blog/"
+FEED_URLS = [
+    SITE_BASE + "/feed",
+    SITE_BASE + "/rss",
+    SITE_BASE + "/atom.xml",
+    SITE_BASE + "/blog/feed",
+    SITE_BASE + "/blog/rss",
+]
+LOCAL_BLOG_DIRS = ["blog", "content/blog", "content/posts", "_posts"]
+README_PATH = Path("README.md")
+MAX_POSTS = 6  # number of posts to include
+
+
+def try_fetch_feed():
+    for url in FEED_URLS:
+        try:
+            feed = feedparser.parse(url)
+        except Exception:
+            continue
+        if feed and getattr(feed, "entries", None):
+            entries = []
+            for e in feed.entries:
+                link = e.get("link") or e.get("id")
+                title = e.get("title", "").strip() or None
+                published = e.get("published") or e.get("updated") or ""
+                entries.append({"title": title or "Untitled", "link": link, "published": published})
+            if entries:
+                print(f"Using feed: {url} (found {len(entries)} entries)")
+                # sort by published if available
+                def parsed_date(x):
+                    try:
+                        return feedparser._parse_date(x["published"]) or ()
+                    except Exception:
+                        return ()
+                # keep original order (usually newest first) but attempt to sort by published if present
+                return entries
+    return None
+
+
+def slug_from_filename(fn: str) -> str:
+    """
+    Convert filename to slug:
+    - remove directory and extension
+    - strip leading date patterns like 2023-01-02-...
+    - strip numeric prefixes
+    """
+    base = Path(fn).stem  # filename without extension
+    # remove leading YYYY-MM-DD- or YYYY-MM-DD_
+    base = re.sub(r"^\d{4}-\d{2}-\d{2}[-_]", "", base)
+    # remove leading number sequences like 01- or 001_
+    base = re.sub(r"^\d+[-_]", "", base)
+    # replace spaces with hyphens, collapse multiple hyphens
+    base = re.sub(r"\s+", "-", base)
+    base = re.sub(r"-{2,}", "-", base)
+    return base
+
+
+def find_local_blog_posts():
+    posts = []
+    repo_root = Path(".")
+    seen = set()
+    for dir_name in LOCAL_BLOG_DIRS:
+        d = repo_root / dir_name
+        if not d.exists() or not d.is_dir():
+            continue
+        for p in sorted(d.rglob("*")):
+            if p.is_file() and p.suffix.lower() in {".md", ".mdx", ".markdown"}:
+                slug = slug_from_filename(p.name)
+                # attempt to read title from first markdown H1 or H2
+                title = None
+                try:
+                    txt = p.read_text(encoding="utf-8")
+                    m = re.search(r"^\s*#\s+(.+)$", txt, flags=re.M)
+                    if not m:
+                        m = re.search(r"^\s*##\s+(.+)$", txt, flags=re.M)
+                    if m:
+                        title = m.group(1).strip()
+                except Exception:
+                    title = None
+                url = SITE_BLOG_PREFIX + slug
+                if url not in seen:
+                    posts.append({"title": title or slug.replace("-", " ").title(), "link": url, "source": str(p)})
+                    seen.add(url)
+    # sort by file modified time (most recent first)
+    posts.sort(key=lambda x: Path(x["source"]).stat().st_mtime if x.get("source") else 0, reverse=True)
+    return posts
+
+
+def build_md_list(items, limit=MAX_POSTS):
+    lines = []
+    for it in items[:limit]:
+        title = it.get("title", "Untitled").strip()
+        link = it.get("link") or "#"
+        lines.append(f"- [{title}]({link})")
+    lines.append("")  # trailing newline
+    lines.append(f"➡️ [Read more blog posts]({SITE_BASE}/blog)")
+    return "\n".join(lines)
+
+
+def replace_block(readme_text: str, new_block: str) -> str:
+    start_tag = "<!-- BLOG-POSTS:START -->"
+    end_tag = "<!-- BLOG-POSTS:END -->"
+    pattern = re.compile(rf"({re.escape(start_tag)})(.*?){re.escape(end_tag)}", flags=re.S)
+    replacement = f"{start_tag}\n{new_block}\n{end_tag}"
+    new_text, n = pattern.subn(replacement, readme_text)
+    if n == 0:
+        raise SystemExit("Error: README markers not found. Ensure <!-- BLOG-POSTS:START --> and <!-- BLOG-POSTS:END --> exist.")
+    return new_text
+
+
+def main():
+    if not README_PATH.exists():
+        print("README.md not found in repo root.")
+        sys.exit(1)
+
+    # 1) Try feed
+    feed_entries = try_fetch_feed()
+
+    if feed_entries:
+        items = [{"title": e["title"], "link": e["link"]} for e in feed_entries if e.get("link")]
+    else:
+        print("No feed found; falling back to scanning local blog files.")
+        items = find_local_blog_posts()
+
+    if not items:
+        print("No posts found (feed empty and no local blog files discovered). Exiting without changes.")
+        sys.exit(0)
+
+    md_block = build_md_list(items, limit=MAX_POSTS)
