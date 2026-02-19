@@ -4,7 +4,7 @@
 ---
 ### Currently Reading
 - **[The Psychology of Money — Morgan Housel](https://amzn.to/4aUHGn9)**  
-  ▓▓▓▓▓░░░░░ 52%  
+  ▓▓▓▓▓▓░░░░ 62%
 ### Completed
 - **[Atomic Habits — James Clear](https://amzn.to/4qjtNU9)**  
 
