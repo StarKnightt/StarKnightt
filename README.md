@@ -8,4 +8,4 @@
 · [wallpaperz.in](https://wallpaperz.in) - Wallpapers with AI image gen <br>
 · [cleantype.software](https://cleantype.software) - Notes taking <br>
 · [Buddy-Finder](https://buddy-find.vercel.app/) - Find your GitHub buddy <br>
-· [Pixel-Quest](https://pixell-quest.vercel.app/) - Play Game
+· [Backroom-Espace](https://backroom-escape.vercel.app/) - Play Game
