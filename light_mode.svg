@@ -1,46 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="484" viewBox="0 0 1040 484" xml:space="preserve">
-<style>svg{background:#ffffff}.ascii{font-family:Consolas,Menlo,'DejaVu Sans Mono',monospace;font-size:9px;fill:#2da44e;white-space:pre}.t{font-family:Consolas,Menlo,'DejaVu Sans Mono',monospace;font-size:13px;fill:#24292f;white-space:pre}.key{fill:#0969da;font-weight:bold}.dots{fill:#8c959f}.val{fill:#24292f}.accent{fill:#1a7f37;font-weight:bold}.muted{fill:#57606a}.title{font-family:Consolas,Menlo,'DejaVu Sans Mono',monospace;font-size:12px;fill:#57606a}</style>
-<rect x="0.5" y="0.5" width="1039" height="483" rx="10" fill="#ffffff" stroke="#d0d7de" />
-<circle cx="22" cy="24" r="6" fill="#ff5f56" />
-<circle cx="42" cy="24" r="6" fill="#ffbd2e" />
-<circle cx="62" cy="24" r="6" fill="#27c93f" />
-<text x="520" y="28" text-anchor="middle" class="title">prasenjit@github: ~</text>
-<line x1="1" y1="46" x2="1039" y2="46" stroke="#d0d7de" />
-<text x="24" y="94.5" class="ascii">                                 :' :    .</text>
-<text x="24" y="105.0" class="ascii">                           .+@*%@@@@@x*++x@x</text>
-<text x="24" y="115.5" class="ascii">                        +%#%%@%##x#%#@@@@@%%@x.</text>
-<text x="24" y="126.0" class="ascii">                      =@%##xx#%#x#%%x#@%#%%%%@%@+':</text>
-<text x="24" y="136.5" class="ascii">                    ,@%xx#%%%#%@%@%%x%@@%#@@x#%@x%=</text>
-<text x="24" y="147.0" class="ascii">                  ,*%%xxxx#%@@#@%@@@%@###@@#x%@%@@</text>
-<text x="24" y="157.5" class="ascii">                  @@###%%#x##%%%#@*=@#@@@%%%@@@@%@x-</text>
-<text x="24" y="168.0" class="ascii">                 .@#x#%%@@@%@@@%@~  : ',:;~; #%##%@@;</text>
-<text x="24" y="178.5" class="ascii">                +x@%x#@@@%%@=+++=             =@%%@%</text>
-<text x="24" y="189.0" class="ascii">                 *%%%@%%%':.                   ~@%@*</text>
-<text x="24" y="199.5" class="ascii">                 :*@###@*              ~*x###x~,@#%#</text>
-<text x="24" y="210.0" class="ascii">                 +@@##%%# .=*#%%%*    ,%*=+~-~-+@@@*</text>
-<text x="24" y="220.5" class="ascii">                  ,@#%#%#;@*~+++~-~+++#.,x@@%=: x@xx</text>
-<text x="24" y="231.0" class="ascii">                   ,@#x%@@ ,*#@@x, @: *+  ;;,   #%=~=</text>
-<text x="24" y="241.5" class="ascii">                    ,%#@%*: ':-,   @   =~    .,+,~# =</text>
-<text x="24" y="252.0" class="ascii">                     x+=@'=-     ,*'    .,,,,'   -++;</text>
-<text x="24" y="262.5" class="ascii">                     %' %* ',,,,'   '  '         ~*-</text>
-<text x="24" y="273.0" class="ascii">                     :+;~x~               ';'    #</text>
-<text x="24" y="283.5" class="ascii">                       -+,x+     ,,,''.''       *,</text>
-<text x="24" y="294.0" class="ascii">                         ''~+         ,.       x,</text>
-<text x="24" y="304.5" class="ascii">                            .x~.            .+=x</text>
-<text x="24" y="315.0" class="ascii">                             .%;~-,      .;==' x</text>
-<text x="24" y="325.5" class="ascii">                              x' .;~+~~~~+~.   x</text>
-<text x="24" y="336.0" class="ascii">                              ;+               ~-</text>
-<text x="24" y="346.5" class="ascii">                            :;*,                %=+~.</text>
-<text x="24" y="357.0" class="ascii">                        -*x@%~.                   *@%@#x=-,.</text>
-<text x="24" y="367.5" class="ascii">                  .:+*#%%@##x                     @x#@xx#%%%%#x*+-,.</text>
-<text x="24" y="378.0" class="ascii">            .:~*#%%%##xxx%@x@=                  ,@#x@%xxxx*##x###%%%#*-</text>
-<text x="24" y="388.5" class="ascii">         -*#%%%#xxxxxxxxxx%%x%x,              .=@##@%xxxxx#@xxxxxxxxx#%%</text>
-<text x="24" y="399.0" class="ascii">       +@%##x*xxxxxxxxxxxxx%@#%@#*-:,     ,~~*%%#%%#xxxxxx@#xxxxxxxxxx*x</text>
-<text x="24" y="409.5" class="ascii">      x@xxx#@#xxxxxxxxxxxxxxx#%#%%%#x*==*x%%%%#%%#xxxxxxx%#xxxxxxxxx%%xx</text>
-<text x="24" y="420.0" class="ascii">     *@xxxxx%%xxxxxxxxxxxxxxxxxx###%%%%%%%%%###xxxxxxxxx%%xxxx#%xxx#@#xx</text>
-<text x="24" y="430.5" class="ascii">    ~@xxxxxxx@#xxxxxxxxxxxxxxxxxxxxxx#xx##xxxxxxxxxxxxx%%xxxxxx%#xx@%xxx</text>
-<text x="24" y="441.0" class="ascii">   .@xxxxx%%x#@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#%xxxxxxx%%x#@xxxx</text>
-<text x="24" y="451.5" class="ascii">   x%xxxxxx%@#@%xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#@xxxxxxxx#%x@#xxxx</text>
+<style>.ascii{font-family:Consolas,Menlo,'DejaVu Sans Mono',monospace;font-size:12.0px;fill:#24292f;white-space:pre}.t{font-family:Consolas,Menlo,'DejaVu Sans Mono',monospace;font-size:13px;fill:#24292f;white-space:pre}.key{fill:#000000;font-weight:bold}.dots{fill:#8c959f}.val{fill:#24292f}.accent{fill:#000000;font-weight:bold}.muted{fill:#57606a}</style>
+<rect width="1040" height="484" fill="#ffffff" />
+<text x="24" y="68.0" class="ascii">                       : ;x%*~.. %=</text>
+<text x="24" y="80.0" class="ascii">                   .=x%%x#*x%x*%#%#@.</text>
+<text x="24" y="92.0" class="ascii">                  *x%*+**++**+##*%*%%x#..</text>
+<text x="24" y="104.0" class="ascii">                .#x**x#+%%*##+@%#*@*xx#:#</text>
+<text x="24" y="116.0" class="ascii">               *@x+++x#%+##%##@#x#@+*#*x*</text>
+<text x="24" y="128.0" class="ascii">              :%+*x#+++#*#*x#x#x###*##%x%:</text>
+<text x="24" y="140.0" class="ascii">              %x+*####*x%#x  +,#x:=,xx**##,</text>
+<text x="24" y="152.0" class="ascii">            .%#x+x%#%%%+~+:         .x##x%</text>
+<text x="24" y="164.0" class="ascii">             .#%##x@,;           .,,. #**#</text>
+<text x="24" y="176.0" class="ascii">             .=#*+*%   ;*#+    =%#@%%*%%*#</text>
+<text x="24" y="188.0" class="ascii">              =%+x*%.#*@%x*x.,:x~+~+~.~@%@</text>
+<text x="24" y="200.0" class="ascii">               *#++%#*+;*%;.#%%%:=@@,,.@%*:</text>
+<text x="24" y="212.0" class="ascii">                ##*@@ ;=@@. @. @+   ..x~@.#</text>
+<text x="24" y="224.0" class="ascii">                 %#@;@... .*%   =~=~~*..%#;</text>
+<text x="24" y="236.0" class="ascii">                .@.+: *;;=+. .  .      .@x</text>
+<text x="24" y="248.0" class="ascii">                 *x=*x          .,;:   *,</text>
+<text x="24" y="260.0" class="ascii">                  .*+#:   .~;,,,,.    ,%</text>
+<text x="24" y="272.0" class="ascii">                     ,#+      .,.    =%.</text>
+<text x="24" y="284.0" class="ascii">                       ,%+,       .,*.%</text>
+<text x="24" y="296.0" class="ascii">                        @.=++=,,:+**  #</text>
+<text x="24" y="308.0" class="ascii">                        %~...:==~,    @</text>
+<text x="24" y="320.0" class="ascii">                      .~*=......      *%@x</text>
+<text x="24" y="332.0" class="ascii">                  .+x#%@=              ,#%*###x=.</text>
+<text x="24" y="344.0" class="ascii">             .=####x#+#:                @+x#+++#%x##x#=.</text>
+<text x="24" y="356.0" class="ascii">         ~#x###+++++x%+@.              @++%+++++*+++++#x%=</text>
+<text x="24" y="368.0" class="ascii">      ;%##+++++++++++#%+%#..,:    ...x%+*%+++++x+++++++++#</text>
+<text x="24" y="380.0" class="ascii">     %%++x++++++++++++*##*####=;~x%##+x##+++++x*+++++++*++</text>
+<text x="24" y="392.0" class="ascii">    x%++++%++++++++++++++xxxx*xxx**xxx*+++++++x+++**+++%++</text>
+<text x="24" y="404.0" class="ascii">   ,@+++++#*++++++++++++++++*xxxxx*++++++++++x+++++#++%*++</text>
+<text x="24" y="416.0" class="ascii">   @++++x++@++++++++++++++++++++++++++++++++x++++++%++@+++</text>
+<text x="24" y="428.0" class="ascii">  +%+++++#x@#++++++++++++++++++++++++++++++x+++++++#+@++++</text>
 <text x="436" y="78" class="t"><tspan class="accent">prasenjit</tspan><tspan class="muted">@</tspan><tspan class="accent">github</tspan></text>
 <text x="436" y="94" class="t"><tspan class="muted">------------------------------------------</tspan></text>
 <text x="436" y="110" class="t"><tspan class="dots">. </tspan><tspan class="key">OS: </tspan><tspan class="dots">........................ </tspan><tspan class="val">Windows 11, Android</tspan></text>

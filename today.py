@@ -123,7 +123,7 @@ def loc_stats(repos):
                 time.sleep(3)
                 continue
             for contributor in data or []:
-                if contributor.get("author", {}).get("login") == USER:
+                if (contributor.get("author") or {}).get("login") == USER:
                     for week in contributor.get("weeks", []):
                         additions += week.get("a", 0)
                         deletions += week.get("d", 0)
