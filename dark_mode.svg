@@ -1,47 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" xml:space="preserve">
-<style>text{font-family:ConsolasFallback,Consolas,'DejaVu Sans Mono',monospace;font-size:16px;white-space:pre}.ascii{fill:#c9d1d9}.t{fill:#c9d1d9}.key{fill:#f0f6fc;font-weight:bold}.dots{fill:#616e7f}.val{fill:#c9d1d9}.accent{fill:#ffffff;font-weight:bold}.muted{fill:#8b949e}</style>
-<rect width="985" height="530" fill="#161b22" rx="15" />
-<text x="15" y="49" class="ascii">                +* *    :</text>
-<text x="15" y="69" class="ascii">        : ,N%ZwwZ#%#wm%ZN%%`</text>
-<text x="15" y="89" class="ascii">       Zw@NwwZxnxnwxwNwm@Zm@Zwm</text>
-<text x="15" y="109" class="ascii">     wZ%mmZNxw#nmNNxx#%Zm@#xwwZ:%</text>
-<text x="15" y="129" class="ascii">   m@NxxxxwN%nZ%%%Nn@#ZwN#mn%mmZN</text>
-<text x="15" y="149" class="ascii">  Z%xmwZZxxx%Z%nmZNwZ%ZNwNmwZ%%w%==</text>
-<text x="15" y="169" class="ascii">  @wxm%%ZNZmZN@mw  ~ *xn,Z,=ZnnnZ%+</text>
-<text x="15" y="189" class="ascii">j%%wxnNN%ZZ%jx.n`            ZNNZ#,</text>
-<text x="15" y="209" class="ascii"> r@wN%wNZ..            ,*NwN+ @nm%</text>
-<text x="15" y="229" class="ascii"> ,w%nnw%N  j###Zw    `w@#w*~jww%N%.</text>
-<text x="15" y="249" class="ascii">  +@nmmn#*Zn+~rxxmn@Z#n=~%#r=..#@#</text>
-<text x="15" y="269" class="ascii">   :@xn@%@,:~w##: #m #@` ##~` :##,N</text>
-<text x="15" y="289" class="ascii">     #w@@#,` xw,  #   @n*:=jr~n @=%</text>
-<text x="15" y="309" class="ascii">     %j=#,m~jj*=*n.   ` `,.     #:Z</text>
-<text x="15" y="329" class="ascii">     N*=rn         .`      `   `@j</text>
-<text x="15" y="349" class="ascii">      *jn,#      ~=...,,.,+    #</text>
-<text x="15" y="369" class="ascii">        `r~w*        ..`     +@</text>
-<text x="15" y="389" class="ascii">            ~@x,     :     ,xr#</text>
-<text x="15" y="409" class="ascii">             @xrrjx,    ,njx ,#</text>
-<text x="15" y="429" class="ascii">              #````rr*jxj`    #</text>
-<text x="15" y="449" class="ascii">            ,,# ` ` ```       wx%w</text>
-<text x="15" y="469" class="ascii">       .ZZNN##                 :,@NZZ</text>
-<text x="15" y="489" class="ascii"> ,n%NNwNm%xN@                   #nn%x</text>
-<text x="390" y="30" class="t"><tspan class="accent">prasenjit</tspan><tspan class="muted">@</tspan><tspan class="accent">github</tspan></text>
-<text x="390" y="50" class="t"><tspan class="muted">------------------------------------------</tspan></text>
-<text x="390" y="70" class="t"><tspan class="dots">. </tspan><tspan class="key">OS: </tspan><tspan class="dots">........................ </tspan><tspan class="val">Windows 11, Android</tspan></text>
-<text x="390" y="90" class="t"><tspan class="dots">. </tspan><tspan class="key">Uptime: </tspan><tspan class="dots">.................... </tspan><tspan class="val" id="age_data">4 years, 10 months, 10 days</tspan></text>
-<text x="390" y="110" class="t"><tspan class="dots">. </tspan><tspan class="key">Host: </tspan><tspan class="dots">...................... </tspan><tspan class="val">prasen.dev</tspan></text>
-<text x="390" y="130" class="t"><tspan class="dots">. </tspan><tspan class="key">Kernel: </tspan><tspan class="dots">.................... </tspan><tspan class="val">Full-Stack Web Developer</tspan></text>
-<text x="390" y="150" class="t"><tspan class="dots">. </tspan><tspan class="key">IDE: </tspan><tspan class="dots">....................... </tspan><tspan class="val">VS Code, Cursor</tspan></text>
-<text x="390" y="190" class="t"><tspan class="dots">. </tspan><tspan class="key">Languages.Programming: </tspan><tspan class="dots">. </tspan><tspan class="val">JavaScript, TypeScript</tspan></text>
-<text x="390" y="210" class="t"><tspan class="dots">. </tspan><tspan class="key">Languages.Web: </tspan><tspan class="dots">......... </tspan><tspan class="val">Next.js, React, HTML, CSS</tspan></text>
-<text x="390" y="230" class="t"><tspan class="dots">. </tspan><tspan class="key">Languages.Real: </tspan><tspan class="dots">........ </tspan><tspan class="val">English, Hindi</tspan></text>
-<text x="390" y="270" class="t"><tspan class="dots">. </tspan><tspan class="key">Projects: </tspan><tspan class="dots">.............. </tspan><tspan class="val">dateup.in, wallpaperz.in, paybrackets</tspan></text>
-<text x="390" y="290" class="t"><tspan class="dots">. </tspan><tspan class="key">Hobbies: </tspan><tspan class="dots">............... </tspan><tspan class="val">3D web experiences, AI apps</tspan></text>
-<text x="390" y="330" class="t"><tspan class="dots">. </tspan><tspan class="key">Contact: </tspan><tspan class="muted">---------------------------------</tspan></text>
-<text x="390" y="350" class="t"><tspan class="dots">. </tspan><tspan class="key">Email: </tspan><tspan class="dots">..................... </tspan><tspan class="val">prasenjitt4e@gmail.com</tspan></text>
-<text x="390" y="370" class="t"><tspan class="dots">. </tspan><tspan class="key">Website: </tspan><tspan class="dots">................... </tspan><tspan class="val">prasen.dev</tspan></text>
-<text x="390" y="390" class="t"><tspan class="dots">. </tspan><tspan class="key">Twitter/X: </tspan><tspan class="dots">. </tspan><tspan class="val">prasenx</tspan><tspan class="muted">  |  </tspan><tspan class="key">GitHub: </tspan><tspan class="dots">. </tspan><tspan class="val">StarKnightt</tspan></text>
-<text x="390" y="430" class="t"><tspan class="dots">. </tspan><tspan class="key">GitHub Stats: </tspan><tspan class="muted">----------------------------</tspan></text>
-<text x="390" y="450" class="t"><tspan class="dots">. </tspan><tspan class="key">Repos: </tspan><tspan class="dots" id="repo_data_dots"> ... </tspan><tspan class="accent" id="repo_data">100</tspan><tspan class="val"> {Contributed: </tspan><tspan class="accent" id="contrib_data">4</tspan><tspan class="val">} | </tspan><tspan class="key">Stars: </tspan><tspan class="dots" id="star_data_dots"> ..... </tspan><tspan class="accent" id="star_data">1,245</tspan></text>
-<text x="390" y="470" class="t"><tspan class="dots">. </tspan><tspan class="key">Commits: </tspan><tspan class="dots" id="commit_data_dots"> ..... </tspan><tspan class="accent" id="commit_data">3,847</tspan><tspan class="val"> | </tspan><tspan class="key">Followers: </tspan><tspan class="dots" id="follower_data_dots"> .......... </tspan><tspan class="accent" id="follower_data">528</tspan></text>
-<text x="390" y="490" class="t"><tspan class="dots">. </tspan><tspan class="key">Lines of Code on GitHub: </tspan><tspan class="dots" id="loc_data_dots"> ... </tspan><tspan class="accent" id="loc_data">814,152</tspan><tspan class="val"> ( </tspan><tspan class="accent" id="loc_add">1,097,794</tspan><tspan class="val">++, </tspan><tspan class="accent" id="loc_del">283,642</tspan><tspan class="val">-- )</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="366" height="500" viewBox="0 0 366 500" xml:space="preserve">
+<style>text{font-family:ConsolasFallback,Consolas,'DejaVu Sans Mono',monospace;font-size:16px;white-space:pre;fill:#c9d1d9}</style>
+<rect width="366" height="500" fill="#161b22" rx="15" />
+<text x="20" y="34">                +* *    :</text>
+<text x="20" y="54">        : ,N%ZwwZ#%#wm%ZN%%`</text>
+<text x="20" y="74">       Zw@NwwZxnxnwxwNwm@Zm@Zwm</text>
+<text x="20" y="94">     wZ%mmZNxw#nmNNxx#%Zm@#xwwZ:%</text>
+<text x="20" y="114">   m@NxxxxwN%nZ%%%Nn@#ZwN#mn%mmZN</text>
+<text x="20" y="134">  Z%xmwZZxxx%Z%nmZNwZ%ZNwNmwZ%%w%==</text>
+<text x="20" y="154">  @wxm%%ZNZmZN@mw  ~ *xn,Z,=ZnnnZ%+</text>
+<text x="20" y="174">j%%wxnNN%ZZ%jx.n`            ZNNZ#,</text>
+<text x="20" y="194"> r@wN%wNZ..            ,*NwN+ @nm%</text>
+<text x="20" y="214"> ,w%nnw%N  j###Zw    `w@#w*~jww%N%.</text>
+<text x="20" y="234">  +@nmmn#*Zn+~rxxmn@Z#n=~%#r=..#@#</text>
+<text x="20" y="254">   :@xn@%@,:~w##: #m #@` ##~` :##,N</text>
+<text x="20" y="274">     #w@@#,` xw,  #   @n*:=jr~n @=%</text>
+<text x="20" y="294">     %j=#,m~jj*=*n.   ` `,.     #:Z</text>
+<text x="20" y="314">     N*=rn         .`      `   `@j</text>
+<text x="20" y="334">      *jn,#      ~=...,,.,+    #</text>
+<text x="20" y="354">        `r~w*        ..`     +@</text>
+<text x="20" y="374">            ~@x,     :     ,xr#</text>
+<text x="20" y="394">             @xrrjx,    ,njx ,#</text>
+<text x="20" y="414">              #````rr*jxj`    #</text>
+<text x="20" y="434">            ,,# ` ` ```       wx%w</text>
+<text x="20" y="454">       .ZZNN##                 :,@NZZ</text>
+<text x="20" y="474"> ,n%NNwNm%xN@                   #nn%x</text>
 </svg>

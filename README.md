@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
   <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
-  <img src="dark_mode.svg" alt="Prasenjit's GitHub profile card with live stats" width="100%">
+  <img src="dark_mode.svg" alt="ASCII portrait of Prasenjit" align="right" width="340">
 </picture>
 
 ## About me
@@ -18,11 +18,3 @@
 · [Paybracket](https://paybrackets.com/) - Count $ take-home pay <br>
 · [Jungle-Experience](https://starknightt.github.io/jungle-trail/) - 3D jungle experience in browser <br>
 · [Night-Street](https://night-street.vercel.app/) - A night street Experience in browser
-
-## Latest Blog Posts
-<!-- BLOG-POSTS:START -->
-<!-- BLOG-POSTS:END -->
-
-## Coding Stats
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
