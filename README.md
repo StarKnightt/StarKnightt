@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
+  <img src="dark_mode.svg" alt="Prasenjit's GitHub profile card with live stats" width="100%">
+</picture>
+
 ## About me
 
 [Prasenjit Nayak](https://prasen.dev)
@@ -11,4 +17,12 @@
 · [Backroom-Espace](https://backroom-escape.vercel.app/) - Play Game <br>
 · [Paybracket](https://paybrackets.com/) - Count $ take-home pay <br>
 · [Jungle-Experience](https://starknightt.github.io/jungle-trail/) - 3D jungle experience in browser <br>
-· [Night-Street](https://night-street.vercel.app/) - A night street Experience in browser 
+· [Night-Street](https://night-street.vercel.app/) - A night street Experience in browser
+
+## Latest Blog Posts
+<!-- BLOG-POSTS:START -->
+<!-- BLOG-POSTS:END -->
+
+## Coding Stats
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
