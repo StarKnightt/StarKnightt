@@ -1,18 +1,5 @@
 {
   "user": "StarKnightt",
-  "terminal": [
-    "jungle-trail",
-    "night-street",
-    "operation-ironhold",
-    "summer-cycle",
-    "bay-ride"
-  ],
-  "gallery": [
-    "jungle-trail",
-    "night-street",
-    "operation-ironhold",
-    "summer-cycle",
-    "bay-ride",
-    "sedona-sunset"
-  ]
+  "born": "2003-06-27",
+  "top": 5
 }

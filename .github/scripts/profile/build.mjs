@@ -31,7 +31,15 @@ const need = name => {
 const BUILD_TOPICS = ['threejs', 'three-js', 'webgl', 'webgpu', 'react-three-fiber', 'game'];
 const latest = [...repos.values()]
   .filter(r => r.topics?.some(t => BUILD_TOPICS.includes(t)))
-  .sort((a, b) => b.created_at.localeCompare(a.created_at))[0] ?? need(cfg.gallery[0].repo);
+  .sort((a, b) => b.created_at.localeCompare(a.created_at))[0];
+
+// Everything made here, forks/archives and the profile repo itself left out.
+const top = [...repos.values()]
+  .filter(r => !r.archived && r.name !== cfg.user && r.name !== '.github')
+  .sort((a, b) => b.stargazers_count - a.stargazers_count)
+  .slice(0, cfg.top);
+
+const avatar = readFileSync(new URL('./avatar.txt', import.meta.url), 'utf8').replace(/\s+$/, '').split('\n');
 
 function ago(iso) {
   const days = Math.round((Date.parse(today) - Date.parse(iso.slice(0, 10))) / 864e5);
@@ -40,6 +48,11 @@ function ago(iso) {
   if (days < 14) return `${days} days ago`;
   if (days < 60) return `${Math.round(days / 7)} weeks ago`;
   return `${Math.round(days / 30)} months ago`;
+}
+
+function age(born) {
+  const [by, bm, bd] = born.split('-').map(Number), [ty, tm, td] = today.split('-').map(Number);
+  return ty - by - (tm < bm || (tm === bm && td < bd) ? 1 : 0);
 }
 
 // ---------- terminal ----------
@@ -59,21 +72,23 @@ const out = (...segs) => ({ cmd: false, segs });
 
 const lines = [
   cmd('whoami'),
-  out(['prasenjit. i build small worlds that run in a browser tab.', 'fg']),
-  cmd('ls ~/builds --sort=stars | head -5'),
-  ...cfg.terminal.map(name => {
-    const r = need(name);
-    return out([pad(name, 21), 'fg'], ['★ ', 'star'], [padL(String(r.stargazers_count), 4), 'star']);
-  }),
-  cmd('ls -t ~/builds | head -1'),
-  out([pad(latest.name, 21), 'accent'], [`shipped ${ago(latest.created_at)}`, 'dim']),
+  out([`prasenjit. ${age(cfg.born)}. full-stack dev, building in public.`, 'fg']),
+  out(['i make cool stuff for the web and run a 500+ dev community.', 'fg']),
+  cmd(`ls ~/projects --sort=stars | head -${cfg.top}`),
+  ...top.map(r => out([pad(r.name, 25), 'fg'], ['★ ', 'star'], [padL(String(r.stargazers_count), 4), 'star'])),
+  ...(latest ? [cmd('ls -t ~/builds | head -1'), out([pad(latest.name, 25), 'accent'], [`shipped ${ago(latest.created_at)}`, 'dim'])] : []),
   cmd('cat ~/rules.txt'),
-  out(['no asset packs. every mesh, texture and sound is written in code.', 'fg']),
+  out(['no asset packs. every mesh, texture and sound is code.', 'fg']),
   cmd(''),
 ];
 
 const W = 860, PADX = 24, BAR = 38, LH = 23, FS = 14, CW = 8.4;
 const H = BAR + 18 + lines.length * LH + 10;
+// ASCII portrait column on the right, sized to the text block's height.
+const ART_ROWS = avatar.length, ART_COLS = Math.max(...avatar.map(l => l.length));
+// avatar.py samples a square image into 46x26 cells, so a cell is 26/46 as wide as it is tall.
+const ALH = (lines.length * LH - 4) / ART_ROWS, ACW = ALH * (26 / 46), AFS = ALH * 0.98;
+const AX = W - PADX - ART_COLS * ACW, AY = BAR + 18;
 const FONT = `ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace`;
 
 // Timeline in ms: commands type out one character at a time, output lands line by line.
@@ -130,6 +145,15 @@ function terminalSvg(theme) {
     <animate attributeName="fill-opacity" calcMode="discrete" dur="1.06s" repeatCount="indefinite" values="1;0" keyTimes="0;0.5"/>
   </rect>`;
 
+  // The portrait prints top to bottom right after `whoami` answers.
+  const artStart = timeline[1][0][0];
+  const art = avatar.map((row, i) => {
+    const lead = row.length - row.trimStart().length, s = row.trim();
+    if (!s) return '';
+    const at = (artStart + i * 28) / CYCLE;
+    return `<text x="${(AX + lead * ACW).toFixed(1)}" y="${(AY + (i + 1) * ALH - ALH * 0.2).toFixed(1)}" textLength="${(s.length * ACW).toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve" opacity="0">${esc(s)}<animate attributeName="opacity" calcMode="discrete" dur="${CYCLE}ms" repeatCount="indefinite" values="0;1" keyTimes="0;${at.toFixed(5)}"/></text>`;
+  }).join('');
+
   const dots = ['#ff5f57', '#febc2e', '#28c840'].map((f, i) => `<circle cx="${22 + i * 20}" cy="${BAR / 2}" r="6" fill="${f}"/>`).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="terminal: prasenjit builds small worlds that run in a browser tab">
 <defs>${clips.join('')}<clipPath id="win"><rect width="${W}" height="${H}" rx="12"/></clipPath></defs>
@@ -139,6 +163,7 @@ function terminalSvg(theme) {
 <line x1="0" y1="${BAR}" x2="${W}" y2="${BAR}" stroke="${c.border}"/>
 ${dots}
 <text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">prasen@dev: ~</text>
+<g font-family="${FONT}" font-size="${AFS.toFixed(2)}" fill="${c.dim}">${art}</g>
 <g font-family="${FONT}" font-size="${FS}">${texts.join('\n')}</g>
 ${cursor}
 </g>
@@ -255,19 +280,6 @@ ${ridges.join('\n')}
 `;
 }
 
-// ---------- gallery ----------
-
-function gallery() {
-  const cells = cfg.gallery.map(repo => {
-    const r = need(repo);
-    const play = r.homepage || r.html_url;
-    return `<td width="33%" valign="top"><a href="${play}"><img src="assets/builds/${repo}.jpg" alt="${repo}" width="100%"></a><br><a href="${r.html_url}"><b>${repo}</b></a> <sub>★ ${r.stargazers_count}</sub></td>`;
-  });
-  const rows = [];
-  for (let i = 0; i < cells.length; i += 3) rows.push(`<tr>\n${cells.slice(i, i + 3).join('\n')}\n</tr>`);
-  return `<table>\n${rows.join('\n')}\n</table>`;
-}
-
 // ---------- write ----------
 
 mkdirSync('assets', { recursive: true });
@@ -275,10 +287,4 @@ writeFileSync('assets/terminal-dark.svg', terminalSvg('dark'));
 writeFileSync('assets/terminal-light.svg', terminalSvg('light'));
 writeFileSync('assets/horizon.svg', horizonSvg(today));
 
-const readme = readFileSync('README.md', 'utf8');
-const START_M = '<!-- BUILDS:START -->', END_M = '<!-- BUILDS:END -->';
-if (!readme.includes(START_M) || !readme.includes(END_M)) throw new Error('README.md is missing the BUILDS markers');
-const next = readme.replace(new RegExp(`${START_M}[\\s\\S]*?${END_M}`), `${START_M}\n${gallery()}\n${END_M}`);
-writeFileSync('README.md', next);
-
-console.log(`[profile] ${today} · latest build: ${latest.name} · terminal cycle ${(CYCLE / 1000).toFixed(1)}s`);
+console.log(`[profile] ${today} · top: ${top.map(r => r.name).join(', ')} · latest build: ${latest?.name ?? 'none'} · terminal cycle ${(CYCLE / 1000).toFixed(1)}s`);
