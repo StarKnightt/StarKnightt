@@ -63,7 +63,7 @@ const lines = [
   cmd('ls ~/builds --sort=stars | head -5'),
   ...cfg.terminal.map(name => {
     const r = need(name);
-    return out([pad(name, 21), 'fg'], ['★ ', 'star'], [pad(padL(String(r.stargazers_count), 4), 7), 'star'], [cfg.taglines[name] ?? '', 'dim']);
+    return out([pad(name, 21), 'fg'], ['★ ', 'star'], [padL(String(r.stargazers_count), 4), 'star']);
   }),
   cmd('ls -t ~/builds | head -1'),
   out([pad(latest.name, 21), 'accent'], [`shipped ${ago(latest.created_at)}`, 'dim']),
@@ -198,19 +198,39 @@ function horizonSvg(date) {
     for (let x = 0; x <= HW; x += 5) d += ` L${x} ${(base - amp * fbm(x * freq + off)).toFixed(1)}`;
     d += ` L${HW} ${HH} Z`;
     ridges.push(`<path d="${d}" fill="${mix(m.haze, m.land, 0.22 + depth * 0.78)}"/>`);
+    // Mist drifts in the valleys behind the 2nd and 4th ridge.
+    if (L === 1 || L === 3) {
+      const my = base + 4, mx = HW * (0.2 + rnd() * 0.6), sway = 40 + rnd() * 40, dur = 38 + rnd() * 30;
+      ridges.push(`<ellipse cx="${mx.toFixed(1)}" cy="${my.toFixed(1)}" rx="${(260 + rnd() * 160).toFixed(0)}" ry="9" fill="url(#mist)"><animateTransform attributeName="transform" type="translate" values="${-sway} 0;${sway} 0;${-sway} 0" dur="${dur.toFixed(1)}s" repeatCount="indefinite"/></ellipse>`);
+    }
   }
 
+  // Everything below moves slowly; SMIL keeps it working inside GitHub's <img>.
+  const r1 = n => n.toFixed(1);
   let extras = '';
   if (moodName === 'night') {
     for (let i = 0; i < 70; i++) {
-      const x = rnd() * HW, y = rnd() * 100, r = 0.4 + rnd() * 0.9;
-      extras += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${(0.35 + rnd() * 0.6).toFixed(2)}"/>`;
+      const x = rnd() * HW, y = rnd() * 100, r = 0.4 + rnd() * 0.9, o = 0.35 + rnd() * 0.6;
+      const twinkle = rnd() < 0.4
+        ? `<animate attributeName="opacity" values="${o.toFixed(2)};0.12;${o.toFixed(2)}" dur="${r1(2 + rnd() * 4)}s" begin="-${r1(rnd() * 6)}s" repeatCount="indefinite"/>`
+        : '';
+      extras += `<circle cx="${r1(x)}" cy="${r1(y)}" r="${r.toFixed(2)}" fill="#fff" opacity="${o.toFixed(2)}">${twinkle}</circle>`;
     }
+    // A shooting star crosses once every ~15s.
+    const sx = HW * (0.2 + rnd() * 0.5), sy = 12 + rnd() * 25;
+    extras += `<g opacity="0"><line x1="${r1(sx)}" y1="${r1(sy)}" x2="${r1(sx - 46)}" y2="${r1(sy - 14)}" stroke="url(#trail)" stroke-width="1.3" stroke-linecap="round"/>
+<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.78;0.8;0.86;1" dur="15s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;150 46;150 46" keyTimes="0;0.78;0.86;1" dur="15s" repeatCount="indefinite"/></g>`;
   } else {
-    const n = 2 + Math.floor(rnd() * 3), bx = HW * (0.15 + rnd() * 0.7), by = 30 + rnd() * 30;
+    // A loose flock drifts across the sky, wings flapping out of step.
+    const n = 3 + Math.floor(rnd() * 3), by = 26 + rnd() * 30, cross = 70 + rnd() * 40, phase = rnd() * cross;
+    const ink = mix(m.land, m.sky[1], 0.25);
     for (let i = 0; i < n; i++) {
-      const x = bx + (rnd() - 0.5) * 80, y = by + (rnd() - 0.5) * 22, s = 3 + rnd() * 2.5;
-      extras += `<path d="M${(x - s).toFixed(1)} ${(y - s * 0.4).toFixed(1)} Q${(x - s * 0.4).toFixed(1)} ${(y - s * 0.7).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)} Q${(x + s * 0.4).toFixed(1)} ${(y - s * 0.7).toFixed(1)} ${(x + s).toFixed(1)} ${(y - s * 0.4).toFixed(1)}" fill="none" stroke="${mix(m.land, m.sky[1], 0.25)}" stroke-width="1.1" stroke-linecap="round"/>`;
+      const ox = (rnd() - 0.5) * 70, oy = (rnd() - 0.5) * 20, s = 3 + rnd() * 2.5, flap = 0.7 + rnd() * 0.5;
+      const up = `M${r1(-s)} ${r1(-s * 0.6)} Q${r1(-s * 0.4)} ${r1(-s)} 0 0 Q${r1(s * 0.4)} ${r1(-s)} ${r1(s)} ${r1(-s * 0.6)}`;
+      const down = `M${r1(-s)} ${r1(s * 0.3)} Q${r1(-s * 0.4)} ${r1(-s * 0.2)} 0 0 Q${r1(s * 0.4)} ${r1(-s * 0.2)} ${r1(s)} ${r1(s * 0.3)}`;
+      extras += `<g><animateTransform attributeName="transform" type="translate" values="${r1(-60 + ox)} ${r1(by + oy)};${r1(HW + 60 + ox)} ${r1(by + oy - 10)}" dur="${r1(cross)}s" begin="-${r1(phase)}s" repeatCount="indefinite"/>
+<path d="${up}" fill="none" stroke="${ink}" stroke-width="1.1" stroke-linecap="round"><animate attributeName="d" values="${up};${down};${up}" dur="${flap.toFixed(2)}s" begin="-${r1(rnd())}s" repeatCount="indefinite"/></path></g>`;
     }
   }
 
@@ -219,16 +239,17 @@ function horizonSvg(date) {
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${m.sky.map((s, i) => `<stop offset="${(i / 3) * 0.78}" stop-color="${s}"/>`).join('')}</linearGradient>
 <radialGradient id="glow" cx="${sunX.toFixed(1)}" cy="${sunY.toFixed(1)}" r="${sunR * 7}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${m.sun}" stop-opacity="0.55"/><stop offset="1" stop-color="${m.sun}" stop-opacity="0"/></radialGradient>
+<radialGradient id="mist"><stop offset="0" stop-color="${m.haze}" stop-opacity="0.55"/><stop offset="1" stop-color="${m.haze}" stop-opacity="0"/></radialGradient>
+<linearGradient id="trail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="frame"><rect width="${HW}" height="${HH}" rx="12"/></clipPath>
 </defs>
 <g clip-path="url(#frame)">
 <rect width="${HW}" height="${HH}" fill="url(#sky)"/>
 ${extras}
-<rect width="${HW}" height="${HH}" fill="url(#glow)"/>
+<rect width="${HW}" height="${HH}" fill="url(#glow)"><animate attributeName="opacity" values="0.8;1;0.8" dur="8s" repeatCount="indefinite"/></rect>
 <circle cx="${sunX.toFixed(1)}" cy="${sunY.toFixed(1)}" r="${sunR.toFixed(1)}" fill="${m.sun}"/>
 ${ridges.join('\n')}
 <text x="16" y="${HH - 14}" font-family="${FONT}" font-size="10.5" fill="#fff" fill-opacity="0.5">${label}</text>
-<text x="${HW - 16}" y="${HH - 14}" font-family="${FONT}" font-size="10.5" fill="#fff" fill-opacity="0.5" text-anchor="end">redrawn every night</text>
 </g>
 </svg>
 `;
@@ -237,10 +258,10 @@ ${ridges.join('\n')}
 // ---------- gallery ----------
 
 function gallery() {
-  const cells = cfg.gallery.map(({ repo, line }) => {
+  const cells = cfg.gallery.map(repo => {
     const r = need(repo);
     const play = r.homepage || r.html_url;
-    return `<td width="33%" valign="top"><a href="${play}"><img src="assets/builds/${repo}.jpg" alt="${repo}" width="100%"></a><br><a href="${r.html_url}"><b>${repo}</b></a> <sub>★ ${r.stargazers_count}</sub><br><sub>${esc(line)}</sub></td>`;
+    return `<td width="33%" valign="top"><a href="${play}"><img src="assets/builds/${repo}.jpg" alt="${repo}" width="100%"></a><br><a href="${r.html_url}"><b>${repo}</b></a> <sub>★ ${r.stargazers_count}</sub></td>`;
   });
   const rows = [];
   for (let i = 0; i < cells.length; i += 3) rows.push(`<tr>\n${cells.slice(i, i + 3).join('\n')}\n</tr>`);
