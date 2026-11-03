@@ -84,14 +84,14 @@ function age(born) {
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 const THEMES = {
-  dark: { bg: '#0b0f14', bar: '#11161d', border: '#262c36', fg: '#d1d7e0', dim: '#7d8590', user: '#7ee787', path: '#79c0ff', star: '#e3b341', accent: '#ffa657' },
-  light: { bg: '#fbfcfd', bar: '#f0f2f5', border: '#d1d9e0', fg: '#1f2328', dim: '#6e7781', user: '#1a7f37', path: '#0969da', star: '#9a6700', accent: '#bc4c00' },
+  dark: { bg: '#0b0f14', bar: '#11161d', border: '#262c36', fg: '#d1d7e0', dim: '#7d8590', user: '#d946ef', path: '#4ade80', star: '#e3b341', accent: '#ffa657' },
+  light: { bg: '#fbfcfd', bar: '#f0f2f5', border: '#d1d9e0', fg: '#1f2328', dim: '#6e7781', user: '#c026d3', path: '#16a34a', star: '#9a6700', accent: '#bc4c00' },
 };
 
 const pad = (s, n) => s + ' '.repeat(Math.max(0, n - s.length));
 const padL = (s, n) => ' '.repeat(Math.max(0, n - s.length)) + s;
 
-const cmd = text => ({ cmd: true, segs: [['prasen@dev', 'user'], [' ~ ', 'path'], ['$ ', 'dim'], [text, 'fg']] });
+const cmd = text => ({ cmd: true, segs: [['dev@prasen:~', 'user'], ['$ ', 'path'], [text, 'fg']] });
 const out = (...segs) => ({ cmd: false, segs });
 
 const lines = [
@@ -100,8 +100,8 @@ const lines = [
   cmd(`ls ~/projects --sort=stars | head -${cfg.top}`),
   ...top.map(r => out([pad(r.name, 25), 'fg'], ['★ ', 'star'], [padL(String(r.stargazers_count), 4), 'star'])),
   ...(latest ? [cmd('ls -t ~/builds | head -1'), out([pad(latest.name, 25), 'accent'], [`shipped ${ago(latest.created_at)}`, 'dim'])] : []),
-  cmd('cat ~/rules.txt'),
-  out(['no asset packs. every mesh, texture and sound is code.', 'fg']),
+  cmd('which cli'),
+  out(['prasen.dev/cli', 'path']),
   cmd(''),
 ];
 
@@ -185,7 +185,7 @@ function terminalSvg(theme) {
 <rect width="${W}" height="${BAR}" fill="${c.bar}"/>
 <line x1="0" y1="${BAR}" x2="${W}" y2="${BAR}" stroke="${c.border}"/>
 ${dots}
-<text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">prasen@dev: ~</text>
+<text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">dev@prasen: ~</text>
 <g font-family="${FONT}" font-size="${(ALH * 0.95).toFixed(2)}" fill="${c.dim}">${art}</g>
 <g font-family="${FONT}" font-size="${FS}">${texts.join('\n')}</g>
 ${cursor}
