@@ -43,7 +43,27 @@ const top = [...repos.values()]
   .sort((a, b) => b.stargazers_count - a.stargazers_count)
   .slice(0, cfg.top);
 
-const avatar = readFileSync(new URL('./avatar.txt', import.meta.url), 'utf8').trimEnd().split(/\r?\n/).map(l => l.trimEnd());
+// avatar.txt is the GitHub avatar run through ASCII Studio (ascii-art-generator-lac.vercel.app),
+// "Standard" set, 60 cols. Bright pixels are dense glyphs, which suits the dark terminal.
+const RAMP = ' .:-=+*#%@';
+const avatarRaw = readFileSync(new URL('./avatar.txt', import.meta.url), 'utf8').trimEnd().split(/\r?\n/);
+
+function avatarRows(invert) {
+  const g = avatarRaw.map(l => [...l]);
+  // The flat grey backdrop renders as '%'; flood it from the edges so only the figure is left.
+  const stack = [];
+  g.forEach((row, y) => row.forEach((ch, x) => {
+    if ((y === 0 || x === 0 || y === g.length - 1 || x === row.length - 1) && ch === '%') stack.push([x, y]);
+  }));
+  while (stack.length) {
+    const [x, y] = stack.pop();
+    if (g[y]?.[x] !== '%') continue;
+    g[y][x] = null;
+    stack.push([x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1]);
+  }
+  // Light theme: dark ink on a light page, so the ramp flips.
+  return g.map(row => row.map(ch => (ch === null ? ' ' : invert ? RAMP[RAMP.length - 1 - RAMP.indexOf(ch)] ?? ch : ch)).join(''));
+}
 
 function ago(iso) {
   const days = Math.round((Date.parse(today) - Date.parse(iso.slice(0, 10))) / 864e5);
@@ -76,8 +96,7 @@ const out = (...segs) => ({ cmd: false, segs });
 
 const lines = [
   cmd('whoami'),
-  out([`prasenjit. ${age(cfg.born)}. full-stack dev, building in public.`, 'fg']),
-  out(['i make cool stuff for the web and run a 500+ dev community.', 'fg']),
+  out([`prasenjit. ${age(cfg.born)}. developer. i make cool stuff.`, 'fg']),
   cmd(`ls ~/projects --sort=stars | head -${cfg.top}`),
   ...top.map(r => out([pad(r.name, 25), 'fg'], ['★ ', 'star'], [padL(String(r.stargazers_count), 4), 'star'])),
   ...(latest ? [cmd('ls -t ~/builds | head -1'), out([pad(latest.name, 25), 'accent'], [`shipped ${ago(latest.created_at)}`, 'dim'])] : []),
@@ -88,15 +107,15 @@ const lines = [
 
 const W = 860, PADX = 24, BAR = 38, LH = 23, FS = 14, CW = 8.4;
 const H = BAR + 18 + lines.length * LH + 10;
-// ASCII portrait column on the right, sized to the text block's height.
-const ART_ROWS = avatar.length, ART_COLS = Math.max(...avatar.map(l => l.length));
-// avatar.py samples a square image into 46x26 cells, so a cell is 26/46 as wide as it is tall.
-const ALH = (lines.length * LH - 4) / ART_ROWS, ACW = ALH * (26 / 46), AFS = ALH * 0.98;
-const AX = W - PADX - ART_COLS * ACW, AY = BAR + 18;
+// Portrait column on the right, as tall as the text block. ASCII Studio samples 2:1 cells.
+const ART_ROWS = avatarRaw.length, ART_COLS = Math.max(...avatarRaw.map(l => l.length));
+const ALH = (lines.length * LH - 6) / ART_ROWS, ACW = ALH * 0.5;
+const AX = W - PADX - ART_COLS * ACW, AY = BAR + 16;
 const FONT = `ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace`;
 
 // Timeline in ms: commands type out one character at a time, output lands line by line.
-const TYPE = 48, AFTER_CMD = 380, OUT_GAP = 70, HOLD = 9000, START = 600;
+// It plays once per page load and then holds (fill="freeze"); only the cursor keeps blinking.
+const TYPE = 48, AFTER_CMD = 380, OUT_GAP = 70, HOLD = 200, START = 600;
 let t = START;
 const timeline = lines.map(line => {
   const promptLen = line.segs.slice(0, 3).reduce((n, [s]) => n + s.length, 0);
@@ -128,7 +147,7 @@ function terminalSvg(theme) {
     const y = BAR + 18 + i * LH + FS;
     const steps = timeline[i];
     const widths = ['0', ...steps.map(([, n], j) => (j === steps.length - 1 ? full : PADX + n * CW + 1).toFixed(1))];
-    clips.push(`<clipPath id="l${i}"><rect x="0" y="${y - FS - 3}" height="${LH}" width="0"><animate attributeName="width" calcMode="discrete" dur="${CYCLE}ms" repeatCount="indefinite" values="${widths.join(';')}" keyTimes="${keyTimes(steps.map(([ms]) => ms))}"/></rect></clipPath>`);
+    clips.push(`<clipPath id="l${i}"><rect x="0" y="${y - FS - 3}" height="${LH}" width="0"><animate attributeName="width" calcMode="discrete" dur="${CYCLE}ms" fill="freeze" values="${widths.join(';')}" keyTimes="${keyTimes(steps.map(([ms]) => ms))}"/></rect></clipPath>`);
     let col = 0;
     const parts = line.segs.filter(([s]) => s.length).map(([s, role]) => {
       const x = PADX + col * CW;
@@ -144,22 +163,22 @@ function terminalSvg(theme) {
   const cy = [String(BAR + 18), ...stops.map(([, , y]) => y)].join(';');
   const kt = keyTimes(stops.map(([ms]) => ms));
   const cursor = `<rect width="${CW}" height="${FS + 3}" fill="${c.fg}" opacity="0.85">
-    <animate attributeName="x" calcMode="discrete" dur="${CYCLE}ms" repeatCount="indefinite" values="${cx}" keyTimes="${kt}"/>
-    <animate attributeName="y" calcMode="discrete" dur="${CYCLE}ms" repeatCount="indefinite" values="${cy}" keyTimes="${kt}"/>
+    <animate attributeName="x" calcMode="discrete" dur="${CYCLE}ms" fill="freeze" values="${cx}" keyTimes="${kt}"/>
+    <animate attributeName="y" calcMode="discrete" dur="${CYCLE}ms" fill="freeze" values="${cy}" keyTimes="${kt}"/>
     <animate attributeName="fill-opacity" calcMode="discrete" dur="1.06s" repeatCount="indefinite" values="1;0" keyTimes="0;0.5"/>
   </rect>`;
 
-  // The portrait prints top to bottom right after `whoami` answers.
+  // The portrait prints top to bottom once `whoami` answers, then stays.
   const artStart = timeline[1][0][0];
-  const art = avatar.map((row, i) => {
+  const art = avatarRows(theme === 'light').map((row, i) => {
     const lead = row.length - row.trimStart().length, s = row.trim();
     if (!s) return '';
-    const at = (artStart + i * 28) / CYCLE;
-    return `<text x="${(AX + lead * ACW).toFixed(1)}" y="${(AY + (i + 1) * ALH - ALH * 0.2).toFixed(1)}" textLength="${(s.length * ACW).toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve" opacity="0">${esc(s)}<animate attributeName="opacity" calcMode="discrete" dur="${CYCLE}ms" repeatCount="indefinite" values="0;1" keyTimes="0;${at.toFixed(5)}"/></text>`;
-  }).join('');
+    const at = (artStart + i * 30) / CYCLE;
+    return `<text x="${(AX + lead * ACW).toFixed(1)}" y="${(AY + (i + 0.8) * ALH).toFixed(1)}" textLength="${(s.length * ACW).toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve" opacity="0">${esc(s)}<animate attributeName="opacity" calcMode="discrete" dur="${CYCLE}ms" fill="freeze" values="0;1" keyTimes="0;${Math.min(at, 0.999).toFixed(5)}"/></text>`;
+  }).join('\n');
 
   const dots = ['#ff5f57', '#febc2e', '#28c840'].map((f, i) => `<circle cx="${22 + i * 20}" cy="${BAR / 2}" r="6" fill="${f}"/>`).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="terminal: prasenjit builds small worlds that run in a browser tab">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="terminal: prasenjit, developer, makes cool stuff">
 <defs>${clips.join('')}<clipPath id="win"><rect width="${W}" height="${H}" rx="12"/></clipPath></defs>
 <g clip-path="url(#win)">
 <rect width="${W}" height="${H}" fill="${c.bg}"/>
@@ -167,7 +186,7 @@ function terminalSvg(theme) {
 <line x1="0" y1="${BAR}" x2="${W}" y2="${BAR}" stroke="${c.border}"/>
 ${dots}
 <text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">prasen@dev: ~</text>
-<g font-family="${FONT}" font-size="${AFS.toFixed(2)}" fill="${c.dim}">${art}</g>
+<g font-family="${FONT}" font-size="${(ALH * 0.95).toFixed(2)}" fill="${c.dim}">${art}</g>
 <g font-family="${FONT}" font-size="${FS}">${texts.join('\n')}</g>
 ${cursor}
 </g>
