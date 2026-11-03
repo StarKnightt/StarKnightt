@@ -1,0 +1,25 @@
+{
+  "user": "StarKnightt",
+  "terminal": [
+    "jungle-trail",
+    "night-street",
+    "operation-ironhold",
+    "summer-cycle",
+    "bay-ride"
+  ],
+  "gallery": [
+    { "repo": "jungle-trail", "line": "a procedural jungle, ruins and a waterfall" },
+    { "repo": "night-street", "line": "a city street at golden hour, r3f" },
+    { "repo": "operation-ironhold", "line": "a full fps in one 290 kb html file" },
+    { "repo": "summer-cycle", "line": "toon-shaded countryside on a bike" },
+    { "repo": "bay-ride", "line": "a painted bay, a boat, a lighthouse" },
+    { "repo": "sedona-sunset", "line": "a dry wash between red rock buttes" }
+  ],
+  "taglines": {
+    "jungle-trail": "procedural jungle, zero external assets",
+    "night-street": "golden-hour city street, r3f",
+    "operation-ironhold": "full fps in one 290 kb html file",
+    "summer-cycle": "toon-shaded countryside ride",
+    "bay-ride": "painted seaside bay, boat to the lighthouse"
+  }
+}

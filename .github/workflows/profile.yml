@@ -1,0 +1,24 @@
+name: redraw-profile
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 0 * * *"
+permissions:
+  contents: write
+jobs:
+  redraw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node .github/scripts/profile/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: commit if changed
+        run: |
+          git add README.md assets
+          if git diff --cached --quiet; then echo "nothing to redraw"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore: redraw profile"
+          git push
