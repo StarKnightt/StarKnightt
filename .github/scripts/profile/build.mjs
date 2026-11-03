@@ -84,14 +84,14 @@ function age(born) {
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 const THEMES = {
-  dark: { bg: '#0b0f14', bar: '#11161d', border: '#262c36', fg: '#d1d7e0', dim: '#7d8590', user: '#d946ef', path: '#4ade80', star: '#e3b341', accent: '#ffa657' },
-  light: { bg: '#fbfcfd', bar: '#f0f2f5', border: '#d1d9e0', fg: '#1f2328', dim: '#6e7781', user: '#c026d3', path: '#16a34a', star: '#9a6700', accent: '#bc4c00' },
+  dark: { bg: '#0b0f14', bar: '#11161d', border: '#262c36', fg: '#d1d7e0', dim: '#7d8590', user: '#7ee787', path: '#79c0ff', star: '#e3b341', accent: '#ffa657' },
+  light: { bg: '#fbfcfd', bar: '#f0f2f5', border: '#d1d9e0', fg: '#1f2328', dim: '#6e7781', user: '#1a7f37', path: '#0969da', star: '#9a6700', accent: '#bc4c00' },
 };
 
 const pad = (s, n) => s + ' '.repeat(Math.max(0, n - s.length));
 const padL = (s, n) => ' '.repeat(Math.max(0, n - s.length)) + s;
 
-const cmd = text => ({ cmd: true, segs: [['dev@prasen:~', 'user'], ['$ ', 'path'], [text, 'fg']] });
+const cmd = text => ({ cmd: true, segs: [['prasen@dev', 'user'], [' ~ ', 'path'], ['$ ', 'dim'], [text, 'fg']] });
 const out = (...segs) => ({ cmd: false, segs });
 
 const lines = [
@@ -185,7 +185,7 @@ function terminalSvg(theme) {
 <rect width="${W}" height="${BAR}" fill="${c.bar}"/>
 <line x1="0" y1="${BAR}" x2="${W}" y2="${BAR}" stroke="${c.border}"/>
 ${dots}
-<text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">dev@prasen: ~</text>
+<text x="${W / 2}" y="${BAR / 2 + 4.5}" fill="${c.dim}" font-family="${FONT}" font-size="12.5" text-anchor="middle">prasen@dev: ~</text>
 <g font-family="${FONT}" font-size="${(ALH * 0.95).toFixed(2)}" fill="${c.dim}">${art}</g>
 <g font-family="${FONT}" font-size="${FS}">${texts.join('\n')}</g>
 ${cursor}
@@ -281,7 +281,7 @@ function horizonSvg(date, h) {
     extras += `<g opacity="0"><line x1="${r1(sx)}" y1="${r1(sy)}" x2="${r1(sx - 46)}" y2="${r1(sy - 14)}" stroke="url(#trail)" stroke-width="1.3" stroke-linecap="round"/>
 <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.78;0.8;0.86;1" dur="15s" repeatCount="indefinite"/>
 <animateTransform attributeName="transform" type="translate" values="0 0;0 0;150 46;150 46" keyTimes="0;0.78;0.86;1" dur="15s" repeatCount="indefinite"/></g>`;
-  } else {
+  } else if (moodName !== 'dusk') {
     // A loose flock drifts across the sky, wings flapping out of step.
     const n = 3 + Math.floor(rnd() * 3), by = 26 + rnd() * 30, cross = 70 + rnd() * 40, phase = rnd() * cross;
     const ink = mix(m.land, m.sky[1], 0.25);
@@ -294,7 +294,39 @@ function horizonSvg(date, h) {
     }
   }
 
-  const label = `${date} · ${String(Math.floor(h)).padStart(2, "0")}:${String(Math.round((h % 1) * 60)).padStart(2, "0")} ist · ${moodName}`;
+  // Bats come out at dusk and stay through the night: jittery paths, fast wings,
+  // drawn in front of the moon so one occasionally crosses it.
+  let bats = '';
+  if (moodName === 'dusk' || moodName === 'night') {
+    const ink = mix(m.land, '#000000', 0.35);
+    // At night a bare silhouette disappears, so the moon catches their edges.
+    const rim = moodName === 'night' ? ` stroke="#9fb3e6" stroke-opacity="0.45" stroke-width="0.07" stroke-linejoin="round"` : '';
+    // Wing frames share one command list so SMIL can tween between them.
+    const WING = {
+      up: 'M0 0 C-0.3 -0.6 -0.7 -1 -1 -0.9 Q-0.85 -0.5 -0.75 -0.3 Q-0.62 -0.36 -0.5 -0.15 Q-0.36 -0.24 -0.25 0 Q-0.1 0.08 0 0.15 Q0.1 0.08 0.25 0 Q0.36 -0.24 0.5 -0.15 Q0.62 -0.36 0.75 -0.3 Q0.85 -0.5 1 -0.9 C0.7 -1 0.3 -0.6 0 0 Z',
+      mid: 'M0 0 C-0.35 -0.2 -0.7 -0.2 -1 -0.1 Q-0.85 0.05 -0.75 0.2 Q-0.62 0.08 -0.5 0.22 Q-0.36 0.08 -0.25 0.2 Q-0.1 0.1 0 0.15 Q0.1 0.1 0.25 0.2 Q0.36 0.08 0.5 0.22 Q0.62 0.08 0.75 0.2 Q0.85 0.05 1 -0.1 C0.7 -0.2 0.35 -0.2 0 0 Z',
+      down: 'M0 0 C-0.3 0.1 -0.65 0.3 -0.9 0.6 Q-0.78 0.55 -0.72 0.75 Q-0.6 0.5 -0.48 0.62 Q-0.36 0.36 -0.24 0.42 Q-0.1 0.2 0 0.15 Q0.1 0.2 0.24 0.42 Q0.36 0.36 0.48 0.62 Q0.6 0.5 0.72 0.75 Q0.78 0.55 0.9 0.6 C0.65 0.3 0.3 0.1 0 0 Z',
+    };
+    const n = moodName === 'dusk' ? 6 + Math.floor(rnd() * 3) : 4 + Math.floor(rnd() * 2);
+    for (let i = 0; i < n; i++) {
+      const s = 5 + rnd() * 4, ltr = rnd() < 0.6, by = 22 + rnd() * 52;
+      const dur = 11 + rnd() * 10, flap = 0.16 + rnd() * 0.1;
+      // An erratic line across the sky: big swoops plus small zig-zags.
+      const xs = [], ys = [];
+      for (let x = -40; x <= HW + 40; x += 45 + rnd() * 35) { xs.push(x); ys.push(by + (rnd() - 0.5) * 34); }
+      xs.push(HW + 40); ys.push(by);
+      const pts = xs.map((x, k) => [ltr ? x : HW - x, ys[k]]);
+      let d = `M${r1(pts[0][0])} ${r1(pts[0][1])} Q${r1((pts[0][0] + pts[1][0]) / 2)} ${r1(pts[0][1] - 12)} ${r1(pts[1][0])} ${r1(pts[1][1])}`;
+      for (let k = 2; k < pts.length; k++) d += ` T${r1(pts[k][0])} ${r1(pts[k][1])}`;
+      const begin = -(rnd() * dur);
+      bats += `<g><animateMotion path="${d}" dur="${r1(dur)}s" begin="${r1(begin)}s" repeatCount="indefinite"/>
+<g transform="scale(${r1(s)})" fill="${ink}"${rim}><animateTransform attributeName="transform" type="translate" values="0 0;0 -0.25;0 0.2;0 0" dur="${r1(0.9 + rnd())}s" repeatCount="indefinite" additive="sum"/>
+<path d="${WING.up}"><animate attributeName="d" values="${WING.up};${WING.mid};${WING.down};${WING.mid};${WING.up}" dur="${flap.toFixed(2)}s" begin="-${r1(rnd())}s" repeatCount="indefinite"/></path>
+<ellipse cx="0" cy="0.1" rx="0.16" ry="0.32"/><path d="M-0.12 -0.12 L-0.1 -0.32 L-0.02 -0.18 L0.02 -0.18 L0.1 -0.32 L0.12 -0.12 Z"/></g></g>`;
+    }
+  }
+
+  const label = `${date} ·${String(Math.floor(h)).padStart(2, "0")}:${String(Math.round((h % 1) * 60)).padStart(2, "0")} ist · ${moodName}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${HW}" height="${HH}" viewBox="0 0 ${HW} ${HH}" role="img" aria-label="the horizon right now in India: ${moodName}">
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${m.sky.map((s, i) => `<stop offset="${(i / 3) * 0.78}" stop-color="${s}"/>`).join('')}</linearGradient>
@@ -308,6 +340,7 @@ function horizonSvg(date, h) {
 ${extras}
 <rect width="${HW}" height="${HH}" fill="url(#glow)"><animate attributeName="opacity" values="0.8;1;0.8" dur="8s" repeatCount="indefinite"/></rect>
 <circle cx="${sunX.toFixed(1)}" cy="${sunY.toFixed(1)}" r="${sunR.toFixed(1)}" fill="${m.sun}"/>
+${bats}
 ${ridges.join('\n')}
 <text x="16" y="${HH - 14}" font-family="${FONT}" font-size="10.5" fill="#fff" fill-opacity="0.5">${label}</text>
 </g>

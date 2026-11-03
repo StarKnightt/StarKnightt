@@ -3,7 +3,7 @@
 <a href="https://prasen.dev/cli"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/terminal-light.svg">
-  <img src="assets/terminal-dark.svg" alt="dev@prasen: whoami. prasenjit. developer. i make cool stuff. open the real terminal at prasen.dev/cli" width="100%">
+  <img src="assets/terminal-dark.svg" alt="prasen@dev: whoami. prasenjit. developer. i make cool stuff. open the real terminal at prasen.dev/cli" width="100%">
 </picture></a>
 
 <p align="center">
