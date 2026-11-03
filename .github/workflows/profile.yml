@@ -2,7 +2,8 @@ name: redraw-profile
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 0 * * *"
+    # :30 UTC is :00 IST, so this lands on every even IST hour
+    - cron: "30 */2 * * *"
 permissions:
   contents: write
 jobs:

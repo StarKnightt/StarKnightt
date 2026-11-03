@@ -1,9 +1,13 @@
-// Redraws the profile: terminal SVGs, the daily horizon, and the build gallery in README.md.
+// Redraws the profile: terminal SVGs and the horizon, lit for the current time in India.
 // No dependencies. Run from the repo root: node .github/scripts/profile/build.mjs
+// PROFILE_DATE=YYYY-MM-DD and PROFILE_TIME=HH:MM (IST) override the clock for previews.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
 const cfg = JSON.parse(readFileSync(new URL('./builds.json', import.meta.url), 'utf8'));
-const today = process.env.PROFILE_DATE || new Date().toISOString().slice(0, 10);
+const ist = new Date(Date.now() + 5.5 * 3600e3);   // read with getUTC* to get IST fields
+const today = process.env.PROFILE_DATE || ist.toISOString().slice(0, 10);
+const [hh, mm] = (process.env.PROFILE_TIME || ist.toISOString().slice(11, 16)).split(':').map(Number);
+const hour = hh + mm / 60;
 
 // ---------- data ----------
 
@@ -184,19 +188,23 @@ function mulberry32(a) {
 }
 
 const MOODS = {
-  dawn:   { sky: ['#22304f', '#8a6b8e', '#f2a97e', '#ffd9a8'], sun: '#fff1d6', land: '#2a2a3d', haze: '#f0b996' },
-  golden: { sky: ['#3d6491', '#8fa7c0', '#f4c27f', '#ffe2a6'], sun: '#fff4dc', land: '#3b2f2a', haze: '#f2c48c' },
-  dusk:   { sky: ['#171533', '#4b2f63', '#b4537a', '#f39062'], sun: '#ffd7a8', land: '#1d1526', haze: '#c96a72' },
-  night:  { sky: ['#03050c', '#0a1124', '#16244a', '#2b3d6b'], sun: '#e9eefc', land: '#05070d', haze: '#2d406c' },
+  dawn:   { sky: ['#22304f', '#8a6b8e', '#f2a97e', '#ffd9a8'], sun: '#fff1d6', land: '#2a2a3d', haze: '#f0b996', glow: 0.55 },
+  day:    { sky: ['#3f74b5', '#6f9dd0', '#a9c9e6', '#dbe9f2'], sun: '#fffbf0', land: '#2c3a36', haze: '#bcd3e0', glow: 0.35 },
+  golden: { sky: ['#3d6491', '#8fa7c0', '#f4c27f', '#ffe2a6'], sun: '#fff4dc', land: '#3b2f2a', haze: '#f2c48c', glow: 0.55 },
+  dusk:   { sky: ['#171533', '#4b2f63', '#b4537a', '#f39062'], sun: '#ffd7a8', land: '#1d1526', haze: '#c96a72', glow: 0.55 },
+  night:  { sky: ['#03050c', '#0a1124', '#16244a', '#2b3d6b'], sun: '#e9eefc', land: '#05070d', haze: '#2d406c', glow: 0.55 },
 };
+
+// IST hour -> light. The landscape itself only changes with the date.
+const moodAt = h => (h >= 5 && h < 7 ? 'dawn' : h >= 7 && h < 16 ? 'day' : h >= 16 && h < 18 ? 'golden' : h >= 18 && h < 19.5 ? 'dusk' : 'night');
 
 const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
 const mix = (a, b, k) => '#' + hex(a).map((v, i) => Math.round(v + (hex(b)[i] - v) * k).toString(16).padStart(2, '0')).join('');
 
-function horizonSvg(date) {
+function horizonSvg(date, h) {
   const seed = Number(date.replace(/-/g, ''));
   const rnd = mulberry32(seed);
-  const moodName = Object.keys(MOODS)[Math.floor(rnd() * 4)];
+  const moodName = moodAt(h);
   const m = MOODS[moodName];
   const HW = 860, HH = 170;
 
@@ -208,9 +216,17 @@ function horizonSvg(date) {
   };
   const fbm = x => vnoise(x) * 0.6 + vnoise(x * 2.1 + 17) * 0.27 + vnoise(x * 4.3 + 41) * 0.13;
 
-  const sunX = HW * (0.18 + rnd() * 0.64);
-  const sunY = moodName === 'night' ? 34 + rnd() * 30 : 92 + rnd() * 22;
-  const sunR = moodName === 'night' ? 11 : 18 + rnd() * 8;
+  // The sun arcs left to right from 6:00 to 18:00 and sinks behind the ridges either side;
+  // the moon takes the same path through the night.
+  let sunX, sunY, sunR;
+  if (moodName === 'night') {
+    const t = ((h - 19.5 + 24) % 24) / 9.5;
+    sunX = HW * (0.06 + 0.88 * t); sunY = 62 - Math.sin(Math.PI * t) * 36; sunR = 11;
+  } else {
+    const t = (h - 6) / 12;
+    sunX = HW * (0.06 + 0.88 * Math.min(1, Math.max(0, t))); sunY = 112 - Math.sin(Math.PI * t) * 88;
+    sunR = moodName === 'day' ? 16 : 20;
+  }
 
   const layers = 5, ridges = [];
   for (let L = 0; L < layers; L++) {
@@ -259,11 +275,11 @@ function horizonSvg(date) {
     }
   }
 
-  const label = `${date} · ${moodName} · seed ${seed}`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${HW}" height="${HH}" viewBox="0 0 ${HW} ${HH}" role="img" aria-label="a horizon drawn from today's date: ${moodName}">
+  const label = `${date} · ${String(Math.floor(h)).padStart(2, "0")}:${String(Math.round((h % 1) * 60)).padStart(2, "0")} ist · ${moodName}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${HW}" height="${HH}" viewBox="0 0 ${HW} ${HH}" role="img" aria-label="the horizon right now in India: ${moodName}">
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${m.sky.map((s, i) => `<stop offset="${(i / 3) * 0.78}" stop-color="${s}"/>`).join('')}</linearGradient>
-<radialGradient id="glow" cx="${sunX.toFixed(1)}" cy="${sunY.toFixed(1)}" r="${sunR * 7}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${m.sun}" stop-opacity="0.55"/><stop offset="1" stop-color="${m.sun}" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow" cx="${sunX.toFixed(1)}" cy="${sunY.toFixed(1)}" r="${sunR * 7}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${m.sun}" stop-opacity="${m.glow}"/><stop offset="1" stop-color="${m.sun}" stop-opacity="0"/></radialGradient>
 <radialGradient id="mist"><stop offset="0" stop-color="${m.haze}" stop-opacity="0.55"/><stop offset="1" stop-color="${m.haze}" stop-opacity="0"/></radialGradient>
 <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="frame"><rect width="${HW}" height="${HH}" rx="12"/></clipPath>
@@ -285,6 +301,6 @@ ${ridges.join('\n')}
 mkdirSync('assets', { recursive: true });
 writeFileSync('assets/terminal-dark.svg', terminalSvg('dark'));
 writeFileSync('assets/terminal-light.svg', terminalSvg('light'));
-writeFileSync('assets/horizon.svg', horizonSvg(today));
+writeFileSync('assets/horizon.svg', horizonSvg(today, hour));
 
 console.log(`[profile] ${today} · top: ${top.map(r => r.name).join(', ')} · latest build: ${latest?.name ?? 'none'} · terminal cycle ${(CYCLE / 1000).toFixed(1)}s`);

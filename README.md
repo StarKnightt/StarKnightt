@@ -1,4 +1,4 @@
-<img src="assets/horizon.svg" alt="a horizon drawn from today's date" width="100%">
+<img src="assets/horizon.svg" alt="the horizon right now in India" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
