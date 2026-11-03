@@ -2,8 +2,8 @@ name: redraw-profile
 on:
   workflow_dispatch:
   schedule:
-    # :30 UTC is :00 IST, so this lands on every even IST hour
-    - cron: "30 */2 * * *"
+    # hourly, at an off-peak minute: GitHub delays or drops jobs queued on :00/:30
+    - cron: "17 * * * *"
 permissions:
   contents: write
 jobs:
