@@ -39,7 +39,7 @@ const top = [...repos.values()]
   .sort((a, b) => b.stargazers_count - a.stargazers_count)
   .slice(0, cfg.top);
 
-const avatar = readFileSync(new URL('./avatar.txt', import.meta.url), 'utf8').replace(/\s+$/, '').split('\n');
+const avatar = readFileSync(new URL('./avatar.txt', import.meta.url), 'utf8').trimEnd().split(/\r?\n/).map(l => l.trimEnd());
 
 function ago(iso) {
   const days = Math.round((Date.parse(today) - Date.parse(iso.slice(0, 10))) / 864e5);
